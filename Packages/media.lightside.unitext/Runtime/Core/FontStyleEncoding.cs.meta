@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e7bd039a29a44d4aaf2748267e132b96
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Core/FontStyleEncoding.cs
+  uploadId: 987276

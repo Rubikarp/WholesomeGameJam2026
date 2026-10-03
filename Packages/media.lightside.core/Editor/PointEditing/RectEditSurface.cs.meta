@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: dca19a786e53c784e944918d188dd880
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/PointEditing/RectEditSurface.cs
+  uploadId: 987276

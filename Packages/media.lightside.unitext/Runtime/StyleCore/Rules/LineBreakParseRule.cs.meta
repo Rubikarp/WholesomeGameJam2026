@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 406abfc7b705a3947b04cb76e72d4d05
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Rules/LineBreakParseRule.cs
+  uploadId: 987276

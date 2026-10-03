@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b2db9c7c3cfb2a4428d8d9c926e4a1df
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Profiling/ProfAlloc.cs
+  uploadId: 987276

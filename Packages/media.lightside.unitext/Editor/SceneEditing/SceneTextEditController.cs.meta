@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 62ac437efe4a9374a979cae0064747d6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/SceneEditing/SceneTextEditController.cs
+  uploadId: 987276

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1895c2a0d5754d178d76d906199f0501
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Collections/ReferenceBinding.cs
+  uploadId: 987276

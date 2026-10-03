@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8326294ce0764f68869ba55df3bcbd58
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Inspection/Runtime/Resources/UniText Inspection Panel Settings.asset
+  uploadId: 987276

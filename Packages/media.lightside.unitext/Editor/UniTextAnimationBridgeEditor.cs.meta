@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f3a83d75f83c42c891c481c74d33e6a0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/UniTextAnimationBridgeEditor.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7201a79c02d3f284facf86d8ecd86b20
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/NativePlatform/NativeInput/NativeInputWindows.cs
+  uploadId: 987276

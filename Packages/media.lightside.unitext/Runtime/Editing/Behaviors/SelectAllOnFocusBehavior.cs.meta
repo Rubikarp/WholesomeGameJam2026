@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 32a9fdf0d47049888a00b07a17c80291
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Behaviors/SelectAllOnFocusBehavior.cs
+  uploadId: 987276

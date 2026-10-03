@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 764f89d7ae7b4384a2c0be13c629465c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Motion/LightSide.Motion.asmdef
+  uploadId: 987276

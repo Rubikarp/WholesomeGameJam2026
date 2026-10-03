@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a38521a090f1cbd4f978077078b4ffd0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Clipboard/ClipboardValueHost.cs
+  uploadId: 987276

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 626c928347de3e2428439ab6cc55f4d0
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/CHANGELOG.md
+  uploadId: 987276

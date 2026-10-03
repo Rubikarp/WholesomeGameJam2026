@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 22327851aa2916949b07f9d7a33d0f72
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 9fd1a254ad36b2d47a5ae1ddc16f6627, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Selection/UniTextSelectable.cs
+  uploadId: 987276

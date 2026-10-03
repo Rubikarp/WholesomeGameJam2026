@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f7f00c7c4416acf40b425b22568ade60
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Markup/MarkupViewMap.cs
+  uploadId: 987276

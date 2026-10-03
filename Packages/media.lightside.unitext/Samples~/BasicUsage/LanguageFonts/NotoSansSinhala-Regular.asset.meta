@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c466ffa12ee175148b192102b08402d2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/LanguageFonts/NotoSansSinhala-Regular.asset
+  uploadId: 987276

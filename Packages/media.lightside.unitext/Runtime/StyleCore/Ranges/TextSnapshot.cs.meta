@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 943f9bc3ffb84f5d818c24f2d4d10168
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Ranges/TextSnapshot.cs
+  uploadId: 987276

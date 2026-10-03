@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5b441f6669bd404fb6c6e5c67ffbda8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/EdgeCasesFonts/Outfit-VariableFont_wght.asset
+  uploadId: 987276

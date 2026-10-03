@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 234a23131dd6c5f4eaf4697368a11341
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Rendering/LightSideShadowClamp.hlsl
+  uploadId: 987276

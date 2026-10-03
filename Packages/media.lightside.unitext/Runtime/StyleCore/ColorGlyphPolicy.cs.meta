@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 4237aebb055e954438ee7fc93e076a87
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/ColorGlyphPolicy.cs
+  uploadId: 987276

@@ -1,0 +1,290 @@
+#define THREADGROUP_DIMENSION_X 8
+#define THREADGROUP_DIMENSION_Y 8
+
+#pragma kernel ThreeTapCheckerboard
+#pragma kernel FourTapCorners
+#pragma kernel FourTapCross
+#pragma kernel FiveTapStar
+#pragma kernel SevenTapHexagonal
+#pragma kernel EightTapCornersAndCross
+#pragma kernel NineTapOctagonal
+#pragma kernel QuadraticHorizontal
+#pragma kernel QuadraticVertical
+#pragma kernel GaussianHorizontal
+#pragma kernel GaussianVertical
+
+Texture2D<half4> Source;
+RWTexture2D<half4> Result;
+
+float2 ResultDimensions;
+float SampleDist;
+float2 SampleOffset;
+bool OffsetCenter;
+uint BlurIteration;
+uint TapsPerSideHor;
+uint TapsPerSideVert;
+
+SamplerState linearClampSampler;
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void ThreeTapCheckerboard(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const float2 texelIndex = floor(idf);
+
+    const half checker = 1 - 2 * fmod(floor(0.5h * BlurIteration) + texelIndex.x + texelIndex.y, 2);
+    const half orientation = fmod(BlurIteration, 2);
+    const half invOrientation = 1.0h - orientation;
+
+    const half texelWidth  = 1.0h / ResultDimensions.x;
+    const half texelHeight = 1.0h / ResultDimensions.y;
+
+    const half horOffset = texelWidth * SampleDist;
+    const half vertOffset = texelHeight * SampleDist;
+
+    const half2 offset1 = half2(
+        checker * (0.5h * texelWidth * invOrientation + horOffset * orientation),
+        checker * (vertOffset * invOrientation + 0.5h * texelHeight * orientation)
+    );
+
+    const half2 offset2 = half2(
+        lerp(horOffset, -horOffset * checker, orientation),
+        lerp(-vertOffset * checker, vertOffset, orientation)
+    );
+
+    const half2 offset3 = half2(
+        lerp(-horOffset, -horOffset * checker, orientation),
+        lerp(-vertOffset * checker, -vertOffset, orientation)
+    );
+
+    const half4 sum = 0.334h * Source.SampleLevel(linearClampSampler, uv + offset1, 0)
+                    + 0.333h * Source.SampleLevel(linearClampSampler, uv + offset2, 0)
+                    + 0.333h * Source.SampleLevel(linearClampSampler, uv + offset3, 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void FourTapCorners(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half2 sampleDist = SampleDist / ResultDimensions;
+
+    const half4 sum = 0.25h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x,  sampleDist.y), 0)
+                    + 0.25h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x,  sampleDist.y), 0)
+                    + 0.25h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x, -sampleDist.y), 0)
+                    + 0.25h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x, -sampleDist.y), 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void FourTapCross(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half2 sampleDist = SampleDist / ResultDimensions;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    const half4 sum = 0.25h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x,       halfTexelOffset.y), 0)
+                    + 0.25h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x,       halfTexelOffset.y), 0)
+                    + 0.25h * Source.SampleLevel(linearClampSampler, uv + half2( halfTexelOffset.x,  sampleDist.y), 0)
+                    + 0.25h * Source.SampleLevel(linearClampSampler, uv + half2( halfTexelOffset.x, -sampleDist.y), 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void FiveTapStar(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half2 offset = SampleDist / ResultDimensions;
+
+    const half4 sum = 0.5h   * Source.SampleLevel(linearClampSampler, uv, 0)
+                    + 0.125h * Source.SampleLevel(linearClampSampler, uv + half2( offset.x,  offset.y), 0)
+                    + 0.125h * Source.SampleLevel(linearClampSampler, uv + half2(-offset.x,  offset.y), 0)
+                    + 0.125h * Source.SampleLevel(linearClampSampler, uv + half2( offset.x, -offset.y), 0)
+                    + 0.125h * Source.SampleLevel(linearClampSampler, uv + half2(-offset.x, -offset.y), 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void SevenTapHexagonal(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half sampleDistanceX = SampleDist / ResultDimensions.x * 0.57735024648h;
+    const half sampleDistanceY = SampleDist / ResultDimensions.y;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    const half4 sum = 0.28h * Source.SampleLevel(linearClampSampler, uv, 0)
+                    + 0.12h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDistanceX * 2, halfTexelOffset.y), 0)
+                    + 0.12h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDistanceX * 2, halfTexelOffset.y), 0)
+                    + 0.12h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDistanceX,     sampleDistanceY), 0)
+                    + 0.12h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDistanceX,     -sampleDistanceY), 0)
+                    + 0.12h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDistanceX,     sampleDistanceY), 0)
+                    + 0.12h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDistanceX,     -sampleDistanceY), 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void EightTapCornersAndCross(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half2 sampleDist = SampleDist / ResultDimensions;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    const half4 sum = 0.165h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x,       sampleDist.y), 0)
+                    + 0.165h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x,       sampleDist.y), 0)
+                    + 0.165h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x,      -sampleDist.y), 0)
+                    + 0.165h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x,      -sampleDist.y), 0)
+                    + 0.085h * Source.SampleLevel(linearClampSampler, uv + half2( halfTexelOffset.x,  sampleDist.y * 2), 0)
+                    + 0.085h * Source.SampleLevel(linearClampSampler, uv + half2( halfTexelOffset.x, -sampleDist.y * 2), 0)
+                    + 0.085h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x * 2,   halfTexelOffset.y), 0)
+                    + 0.085h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x * 2,   halfTexelOffset.y), 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void NineTapOctagonal(uint3 id : SV_DispatchThreadID)
+{
+    const float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half2 sampleDist = SampleDist / ResultDimensions;
+    const half2 sampleDist2 = sampleDist * 1.414427h;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    const half4 sum = 0.2h * Source.SampleLevel(linearClampSampler, uv, 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist2.x,      halfTexelOffset.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist2.x,      halfTexelOffset.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2( halfTexelOffset.x,  sampleDist2.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2( halfTexelOffset.x, -sampleDist2.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x,       sampleDist.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x,       sampleDist.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2( sampleDist.x,      -sampleDist.y), 0)
+                    + 0.1h * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDist.x,      -sampleDist.y), 0);
+
+    Result[id.xy] = sum;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void QuadraticHorizontal(uint3 id : SV_DispatchThreadID)
+{
+    float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half sampleDistanceX = SampleDist / ResultDimensions.x;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    half4 color = Source.SampleLevel(linearClampSampler, uv + half2(0, halfTexelOffset.y) * OffsetCenter, 0);
+    half totalWeight = 1.h;
+
+    for (uint slot = 1; slot <= TapsPerSideHor; slot++)
+    {
+        const half t = 1 - slot / (TapsPerSideHor + 1.);
+        const half weight = t * t;
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2( sampleDistanceX * slot, halfTexelOffset.y), 0);
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDistanceX * slot, halfTexelOffset.y), 0);
+        totalWeight += 2 * weight;
+    }
+
+    Result[id.xy] = color / totalWeight;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void QuadraticVertical(uint3 id : SV_DispatchThreadID)
+{
+    float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half sampleDistanceY = SampleDist / ResultDimensions.y;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    half4 color = Source.SampleLevel(linearClampSampler, uv + half2(halfTexelOffset.x, 0) * OffsetCenter, 0);
+    half totalWeight = 1.h;
+
+    for (uint slot = 1; slot <= TapsPerSideVert; slot++)
+    {
+        const half t = 1 - slot / (TapsPerSideVert + 1.);
+        const half weight = t * t;
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2(halfTexelOffset.x,  sampleDistanceY * slot), 0);
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2(halfTexelOffset.x, -sampleDistanceY * slot), 0);
+        totalWeight += 2 * weight;
+    }
+
+    Result[id.xy] = color / totalWeight;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void GaussianHorizontal(uint3 id : SV_DispatchThreadID)
+{
+    float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half lowTapAdjust = 0.8h * max(0, 6 - TapsPerSideHor * 0.2h);
+    const half sigma = (lowTapAdjust + TapsPerSideHor) * 2 / 6.;
+    const half weightExpDivisor = -2 * sigma * sigma;
+    const half sampleDistanceX = SampleDist / ResultDimensions.x;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    half4 color = Source.SampleLevel(linearClampSampler, uv + half2(0, halfTexelOffset.y) * OffsetCenter, 0);
+    half totalWeight = 1.h;
+
+    for (uint slot = 1; slot <= TapsPerSideHor; slot++)
+    {
+        const half weight = exp(slot * slot / weightExpDivisor);
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2( sampleDistanceX * slot, halfTexelOffset.y), 0);
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2(-sampleDistanceX * slot, halfTexelOffset.y), 0);
+        totalWeight += 2 * weight;
+    }
+
+    Result[id.xy] = color / totalWeight;
+}
+
+[numthreads(THREADGROUP_DIMENSION_X, THREADGROUP_DIMENSION_Y, 1)]
+void GaussianVertical(uint3 id : SV_DispatchThreadID)
+{
+    float2 idf = id.xy + 0.5h;
+    if (any(idf >= ResultDimensions)) return;
+    const half2 uv = idf / ResultDimensions;
+    const half lowTapAdjust = 0.8h * max(0, 6 - TapsPerSideVert * 0.2h);
+    const half sigma = (lowTapAdjust + TapsPerSideVert) * 2 / 6.;
+    const half weightExpDivisor = -2 * sigma * sigma;
+    const half sampleDistanceY = SampleDist / ResultDimensions.y;
+    const half2 texelSize  = half2(1.h / ResultDimensions.x, 1.h / ResultDimensions.y);
+    const half2 halfTexelOffset = texelSize * SampleOffset;
+
+    half4 color = Source.SampleLevel(linearClampSampler, uv + half2(halfTexelOffset.x, 0) * OffsetCenter, 0);
+    half totalWeight = 1.h;
+
+    for (uint slot = 1; slot <= TapsPerSideVert; slot++)
+    {
+        const half weight = exp(slot * slot / weightExpDivisor);
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2(halfTexelOffset.x,  sampleDistanceY * slot), 0);
+        color += weight * Source.SampleLevel(linearClampSampler, uv + half2(halfTexelOffset.x, -sampleDistanceY * slot), 0);
+        totalWeight += 2 * weight;
+    }
+
+    Result[id.xy] = color / totalWeight;
+}

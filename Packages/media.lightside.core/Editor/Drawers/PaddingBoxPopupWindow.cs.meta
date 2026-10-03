@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 31aac5d59965ac94893e3b540b5cf85c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Drawers/PaddingBoxPopupWindow.cs
+  uploadId: 987276

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cc54a570fcd742647a0ce55aa741a918
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: cba7e9c833514908959926d33ca4dcbc, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Core/UniTextSprites.cs
+  uploadId: 987276

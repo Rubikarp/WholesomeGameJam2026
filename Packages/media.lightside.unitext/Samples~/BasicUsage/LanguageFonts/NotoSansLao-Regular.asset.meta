@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc26cb73d0aff1c41925199fe955b436
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/LanguageFonts/NotoSansLao-Regular.asset
+  uploadId: 987276

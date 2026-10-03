@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8a6bdc2820744f79a57f9f0903f60cbf
+timeCreated: 1784790004
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Decoration/HighlightModifier.cs
+  uploadId: 987276

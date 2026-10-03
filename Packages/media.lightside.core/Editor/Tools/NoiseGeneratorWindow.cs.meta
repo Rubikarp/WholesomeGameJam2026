@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: ef324ec3adb3bdc4894ded6e5b56a1fc
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Tools/NoiseGeneratorWindow.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 106aa329741c7df43a4bd22537e972f9
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Behaviors/CaseTransformBehavior.cs
+  uploadId: 987276

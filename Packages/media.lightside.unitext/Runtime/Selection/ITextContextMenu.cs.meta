@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 0710da94e9e2f5b4bae9d01287979a90
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Selection/ITextContextMenu.cs
+  uploadId: 987276

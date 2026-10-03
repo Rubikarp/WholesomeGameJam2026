@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: c7cb0ae450c03944ea1175e6d0570984
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/InputFilters/EmailFilter.cs
+  uploadId: 987276

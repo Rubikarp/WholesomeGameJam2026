@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85cadb1912a205d4e877968e0757a9e5, type: 3}
+  m_Name: BehaviorPreset
+  m_EditorClassIdentifier: LightSide.UniText::LightSide.BehaviorPreset
+  behaviors:
+    items:
+    - rid: 7750513983122309179
+    - rid: 7750513983122309180
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 6670084126067654712
+      type: {class: AnyMarkup, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 6670084126067654713
+      type: {class: ColorModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 5107816888760728403
+          low: 17845985368776734382
+        color:
+          serializedVersion: 2
+          rgba: 4284440575
+    - rid: 7750513983122309179
+      type: {class: LinkOnPasteBehavior, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 7750513983122309180
+      type: {class: TextFormattingBehavior, ns: LightSide, asm: LightSide.UniText}
+      data:
+        commands:
+          items:
+          - name: bold
+            target:
+              rid: 7750513983122309189
+            key: 1
+            shift: 0
+          - name: italic
+            target:
+              rid: 7750513983122309181
+            key: 31
+            shift: 0
+          - name: underline
+            target:
+              rid: 7750513983122309182
+            key: 32
+            shift: 0
+          - name: kitten
+            target:
+              rid: 7750514006606479430
+            key: 7
+            shift: 0
+        clearFormattingKey: 33
+        markupVisibility: 0
+        markupChrome:
+          items:
+          - selector:
+              rid: 6670084126067654712
+            style:
+              rid: 6670084126067654713
+            parameter: 
+        richPaste: 1
+        plainTextPaste: 0
+        typingMarkup: 0
+        arrowKeyEscape: 1
+    - rid: 7750513983122309181
+      type: {class: ReferencedStyle, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifier:
+          rid: 7750514006606479440
+        parameter: 
+    - rid: 7750513983122309182
+      type: {class: ReferencedStyle, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifier:
+          rid: 7750514006606479441
+        parameter: 
+    - rid: 7750513983122309189
+      type: {class: ReferencedStyle, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifier:
+          rid: 7750514006606479439
+        parameter: 
+    - rid: 7750514006606479430
+      type: {class: ReferencedStyle, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifier:
+          rid: 7750514006606479464
+        parameter: fox,linear,0;3,3,0.5
+    - rid: 7750514006606479439
+      type: {class: BoldModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 5022381595465881882
+          low: 959107500010702752
+        weight: 0
+        mode: 0
+    - rid: 7750514006606479440
+      type: {class: ItalicModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 5701626066981931447
+          low: 2773655953832227235
+        style:
+          mode: 0
+          slant: 0
+    - rid: 7750514006606479441
+      type: {class: UnderlineModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 4888093272310838891
+          low: 18402813455976704906
+        provider:
+          rid: -2
+        paint:
+          kind: 0
+          color:
+            serializedVersion: 2
+            rgba: 0
+          swatch: 
+        style: 0
+        thickness:
+          value: 0
+          unit: 0
+        offset:
+          value: 0
+          unit: 0
+        skipInk: 0
+    - rid: 7750514006606479464
+      type: {class: CompositeModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 5221821770796898277
+          low: 2190031965409382322
+        modifiers:
+          items:
+          - rid: 7750514006606479465
+          - rid: 7750514006606479468
+    - rid: 7750514006606479465
+      type: {class: FillModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 4692825249908688848
+          low: 14339416474776478081
+        provider:
+          rid: 7750514006606479467
+        mapping: 0
+        shape: -1
+        fit: -1
+        angle: NaN
+        scale: NaN
+        paintOffset: {x: NaN, y: NaN}
+        corners: 0
+        miterLimit: 2
+        tint:
+          serializedVersion: 2
+          rgba: 4294967295
+        paint:
+          kind: 0
+          color:
+            serializedVersion: 2
+            rgba: 0
+          swatch: 
+        softness:
+          value: 0
+          unit: 0
+        dilate:
+          value: 0
+          unit: 0
+    - rid: 7750514006606479467
+      type: {class: AssetPaintProvider, ns: LightSide, asm: LightSide.UniText}
+      data:
+        asset: {fileID: 11400000, guid: 0c7ddbd2eedb4fd4fa09e6baa5ce13ef, type: 2}
+    - rid: 7750514006606479468
+      type: {class: WaveModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifierNodeId:
+          high: 5090191836292619838
+          low: 8285736867076793505
+        phase: 0
+        amplitude: 3
+        frequency: 3
+        spread: 0.5

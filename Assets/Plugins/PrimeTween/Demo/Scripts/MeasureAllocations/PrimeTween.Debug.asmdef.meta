@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bd26724a735bb4282b7fbdef4681eb5f
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373496
+  packageName: "PrimeTween PRO \xB7 Code-Free Animations"
+  packageVersion: 1.4.12-pro
+  assetPath: Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/PrimeTween.Debug.asmdef
+  uploadId: 959074

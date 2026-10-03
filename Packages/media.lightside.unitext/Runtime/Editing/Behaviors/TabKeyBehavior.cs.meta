@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 1506c542567f89041894e2a0997701b1
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Behaviors/TabKeyBehavior.cs
+  uploadId: 987276

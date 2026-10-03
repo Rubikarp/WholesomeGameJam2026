@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: db60f141c7638ec449e0c300a23c8163
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/FontCore/GlyphCurveCache.cs
+  uploadId: 987276

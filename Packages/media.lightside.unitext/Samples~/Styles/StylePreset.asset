@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c462a215d824769a04b6e8060809d3b, type: 3}
+  m_Name: StylePreset
+  m_EditorClassIdentifier: LightSide.UniText::ModRegisterConfig
+  styles:
+    items:
+    - modifier:
+        rid: 2935973566340137106
+      source:
+        rid: 2935973566340137107
+      defaultParameter: 
+      disabled: 0
+    - modifier:
+        rid: 2935973566340137110
+      source:
+        rid: 2935973566340137111
+      defaultParameter: 
+      disabled: 0
+    - modifier:
+        rid: 2935973732210966574
+      source:
+        rid: 2935973732210966575
+      defaultParameter: 
+      disabled: 0
+    - modifier:
+        rid: 6670084005738315875
+      source:
+        rid: 266424891755987267
+      defaultParameter: 
+      disabled: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 266424891755987267
+      type: {class: GradientParseRule, ns: LightSide, asm: LightSide.UniText}
+      data:
+        defaultParameter: 
+    - rid: 2935973566340137106
+      type: {class: ColorModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        color:
+          serializedVersion: 2
+          rgba: 4294967295
+    - rid: 2935973566340137107
+      type: {class: ColorParseRule, ns: LightSide, asm: LightSide.UniText}
+      data:
+        defaultParameter: 
+    - rid: 2935973566340137110
+      type: {class: LineHeightModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        heightValue:
+          value: 0
+          unit: 0
+        mode: 0
+        scale: 1.2
+        leading: 0
+    - rid: 2935973566340137111
+      type: {class: LineHeightParseRule, ns: LightSide, asm: LightSide.UniText}
+      data:
+        defaultParameter: 
+    - rid: 2935973732210966574
+      type: {class: UppercaseModifier, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 2935973732210966575
+      type: {class: UppercaseParseRule, ns: LightSide, asm: LightSide.UniText}
+      data:
+        defaultParameter: 
+    - rid: 6670084005738315875
+      type: {class: FillModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        provider:
+          rid: 6670084005738315876
+        mapping: 0
+        shape: -1
+        fit: -1
+        angle: NaN
+        scale: NaN
+        paintOffset: {x: NaN, y: NaN}
+        corners: 0
+        miterLimit: 2
+        paint:
+          kind: 0
+          color:
+            serializedVersion: 2
+            rgba: 0
+          swatch: 
+        softness:
+          value: 0
+          unit: 0
+        dilate:
+          value: 0
+          unit: 0
+    - rid: 6670084005738315876
+      type: {class: InlinePaintProvider, ns: LightSide, asm: LightSide.UniText}
+      data:
+        entries:
+          items:
+          - name: rainbow
+            paint:
+              source:
+                kind: 1
+                color: {r: 0, g: 0, b: 0, a: 0}
+                gradient:
+                  stops:
+                  - time: 0
+                    color: {r: 1, g: 0, b: 0, a: 1}
+                  - time: 0.16358025
+                    color: {r: 1, g: 0.49574798, b: 0, a: 1}
+                  - time: 0.3148148
+                    color: {r: 1, g: 0.99247026, b: 0, a: 1}
+                  - time: 0.4814815
+                    color: {r: 0.15953666, g: 1, b: 0, a: 1}
+                  - time: 0.6481481
+                    color: {r: 0, g: 1, b: 0.8958947, a: 1}
+                  - time: 0.84876543
+                    color: {r: 0, g: 0.2723521, b: 1, a: 1}
+                  - time: 1
+                    color: {r: 0.513906, g: 0, b: 1, a: 1}
+                  interpolation: 0
+                texture: {fileID: 0}
+              projection:
+                kind: 0
+                fit: 0
+                angle: 0
+                scale: 0
+                offset: {x: 0, y: 0}
+              blend: 0
+            mapping: 0

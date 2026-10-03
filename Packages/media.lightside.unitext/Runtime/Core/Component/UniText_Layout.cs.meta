@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 6d04026b6cca425f9554dbd33b8074af
+timeCreated: 1765536615
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Core/Component/UniText_Layout.cs
+  uploadId: 987276

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4fc57b9ecf6a4434d8244d37427dd958
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Shaders/Templates/Examples/LightSide_Effect-Dissolve.hlsl
+  uploadId: 987276

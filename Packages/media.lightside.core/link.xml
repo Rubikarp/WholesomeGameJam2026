@@ -1,0 +1,11 @@
+<linker>
+  <assembly fullname="LightSide.Core">
+    <type fullname="LightSide.Prof" preserve="all"/>
+    <type fullname="LightSide.ProfRegistry" preserve="all"/>
+    <type fullname="LightSide.ProfAlloc" preserve="all"/>
+  </assembly>
+  <!-- ProfAlloc resolves GC.GetAllocatedBytesForCurrentThread by reflection only - invisible to the linker. -->
+  <assembly fullname="mscorlib">
+    <type fullname="System.GC" preserve="all"/>
+  </assembly>
+</linker>

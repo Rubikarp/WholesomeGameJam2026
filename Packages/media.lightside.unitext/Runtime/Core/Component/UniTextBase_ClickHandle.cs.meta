@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5e57341fda965f647a0fb672a79da46f
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Core/Component/UniTextBase_ClickHandle.cs
+  uploadId: 987276

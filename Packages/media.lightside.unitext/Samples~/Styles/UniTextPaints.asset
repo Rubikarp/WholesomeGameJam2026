@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a964f6befc74f048aec5302d125507a, type: 3}
+  m_Name: UniTextPaints
+  m_EditorClassIdentifier: LightSide.UniText::LightSide.UniTextPaints
+  entries:
+    items:
+    - name: test
+      paint:
+        source:
+          kind: 2
+          color: {r: 1, g: 1, b: 1, a: 1}
+          gradient:
+            stops:
+            - time: 0
+              color: {r: 0, g: 0, b: 0, a: 0}
+            - time: 1
+              color: {r: 0, g: 0, b: 0, a: 0}
+            interpolation: 0
+          texture: {fileID: 2800000, guid: 977b95cbec853a648b1c5ac5be90e736, type: 3}
+        projection:
+          kind: 0
+          fit: 3
+          spread: 0
+          angle: 92.74
+          scale: 2
+          offset: {x: 0, y: 0}
+        blend: 0
+      mapping: 0
+    - name: test3
+      paint:
+        source:
+          kind: 2
+          color: {r: 1, g: 1, b: 1, a: 1}
+          gradient:
+            stops:
+            - time: 0
+              color: {r: 0, g: 0, b: 0, a: 0}
+            - time: 1
+              color: {r: 0, g: 0, b: 0, a: 0}
+            interpolation: 0
+          texture: {fileID: 2800000, guid: cec3d001ee01b3d4f8b50fbd7a887f8a, type: 3}
+        projection:
+          kind: 0
+          fit: 3
+          spread: 0
+          angle: 92.74
+          scale: 4.04
+          offset: {x: 0, y: 0}
+        blend: 0
+      mapping: 0
+    - name: amber
+      paint:
+        source:
+          kind: 2
+          color: {r: 1, g: 1, b: 1, a: 1}
+          gradient:
+            stops:
+            - time: 0
+              color: {r: 1, g: 1, b: 1, a: 1}
+            - time: 1
+              color: {r: 1, g: 1, b: 1, a: 1}
+            interpolation: 0
+          texture: {fileID: 2800000, guid: d151fc91f7b0b0e438cd1fe13f46df35, type: 3}
+        projection:
+          kind: 0
+          fit: 0
+          spread: 0
+          angle: 48.23
+          scale: 0
+          offset: {x: 0, y: 0}
+        blend: 0
+      mapping: 0
+    - name: test2
+      paint:
+        source:
+          kind: 0
+          color: {r: 0.17676413, g: 1, b: 0, a: 0.41960785}
+          gradient:
+            stops:
+            - time: 0
+              color: {r: 1, g: 1, b: 1, a: 1}
+            - time: 1
+              color: {r: 1, g: 1, b: 1, a: 1}
+            interpolation: 0
+          texture: {fileID: 2800000, guid: 7f100ba1455fc2943bc73e647e2dc892, type: 3}
+        projection:
+          kind: 0
+          fit: 3
+          spread: 0
+          angle: 92.74
+          scale: 2
+          offset: {x: 0, y: 0}
+        blend: 0
+      mapping: 0
+    - name: neon
+      paint:
+        source:
+          kind: 1
+          color: {r: 1, g: 1, b: 1, a: 1}
+          gradient:
+            stops:
+            - time: 0
+              color: {r: 0, g: 0.99215686, b: 1, a: 1}
+            - time: 1
+              color: {r: 1, g: 0, b: 0.87957644, a: 1}
+            interpolation: 0
+          texture: {fileID: 0}
+        projection:
+          kind: 0
+          fit: 0
+          spread: 0
+          angle: 0
+          scale: 0
+          offset: {x: 0, y: 0}
+        blend: 0
+      mapping: 0

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: c8f3a1914db64ab4b0bd7219ce568e22
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Events/OrderedEvent.cs
+  uploadId: 987276

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 553e2dc361a308e409c2951074a2ea2c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/FontExamples.unity
+  uploadId: 987276

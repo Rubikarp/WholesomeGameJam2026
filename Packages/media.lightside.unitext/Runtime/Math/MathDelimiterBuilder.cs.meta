@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: d24c3615237e9b341921e5b7a563cd53
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Math/MathDelimiterBuilder.cs
+  uploadId: 987276

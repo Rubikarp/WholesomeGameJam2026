@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6c158df283d7f644b4aa67d432192f8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Defaults/Editing/InsertionHandle.prefab
+  uploadId: 987276

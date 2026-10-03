@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c6437f012026c5b468c13ae06ff8d4a2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/EditableText/RightDemoChatMessage.prefab
+  uploadId: 987276

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: bed69a3006d74b88a44f9bbc783876da
+timeCreated: 1766708329
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Rules/StringParseRule.cs
+  uploadId: 987276

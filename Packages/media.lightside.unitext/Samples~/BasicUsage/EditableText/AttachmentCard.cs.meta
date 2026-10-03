@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b5a343033e323014f9c9ec8ce70a910c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/EditableText/AttachmentCard.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a1c33fb5d6dfbbd49957935f2ad7dcbd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/UnitValueDrawer.cs
+  uploadId: 987276

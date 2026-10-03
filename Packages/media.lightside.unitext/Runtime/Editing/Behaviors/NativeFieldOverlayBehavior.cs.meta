@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 9e7eb14d9f94fff46b41db9393f25dd2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Behaviors/NativeFieldOverlayBehavior.cs
+  uploadId: 987276

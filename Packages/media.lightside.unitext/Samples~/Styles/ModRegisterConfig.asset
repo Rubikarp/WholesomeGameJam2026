@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c462a215d824769a04b6e8060809d3b, type: 3}
+  m_Name: ModRegisterConfig
+  m_EditorClassIdentifier: LightSide.UniText::ModRegisterConfig
+  styles:
+    items:
+    - name: 
+      modifier:
+        rid: 2935973566340137106
+      source:
+        rid: 2935973566340137107
+      defaultParameter: 
+    - name: 
+      modifier:
+        rid: 2935973566340137110
+      source:
+        rid: 2935973566340137111
+      defaultParameter: 
+    - name: 
+      modifier:
+        rid: 2935973732210966574
+      source:
+        rid: 2935973732210966575
+      defaultParameter: 
+    - name: 
+      modifier:
+        rid: 7750514006606479454
+      source:
+        rid: 7750514006606479450
+      defaultParameter: 
+  references:
+    version: 2
+    RefIds:
+    - rid: 2935973566340137106
+      type: {class: ColorModifier, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 2935973566340137107
+      type: {class: ColorParseRule, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 2935973566340137110
+      type: {class: LineHeightModifier, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 2935973566340137111
+      type: {class: LineHeightParseRule, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 2935973732210966574
+      type: {class: UppercaseModifier, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 2935973732210966575
+      type: {class: UppercaseParseRule, ns: LightSide, asm: LightSide.UniText}
+      data: 
+    - rid: 7750514006606479450
+      type: {class: TagRule, ns: LightSide, asm: LightSide.UniText}
+      data:
+        tagName: tag
+        defaultParameter: fox,linear,0
+    - rid: 7750514006606479454
+      type: {class: CompositeModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        modifiers:
+          items:
+          - rid: 7750514006606479455
+    - rid: 7750514006606479455
+      type: {class: FillModifier, ns: LightSide, asm: LightSide.UniText}
+      data:
+        provider:
+          rid: 7750514006606479463
+    - rid: 7750514006606479463
+      type: {class: AssetPaintProvider, ns: LightSide, asm: LightSide.UniText}
+      data:
+        asset: {fileID: 11400000, guid: 0c7ddbd2eedb4fd4fa09e6baa5ce13ef, type: 2}

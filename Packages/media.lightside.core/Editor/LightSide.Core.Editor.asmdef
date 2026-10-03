@@ -1,0 +1,20 @@
+{
+    "name": "LightSide.Core.Editor",
+    "rootNamespace": "LightSide",
+    "references": [
+        "GUID:283c44d2715769af3e5038d7cabfa7f7",
+        "UnityEditor.UI",
+        "LightSide.Motion"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

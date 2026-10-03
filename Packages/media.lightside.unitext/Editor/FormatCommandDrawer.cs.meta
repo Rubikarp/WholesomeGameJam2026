@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 370268af240d34244b5d56b5d7e0223d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/FormatCommandDrawer.cs
+  uploadId: 987276

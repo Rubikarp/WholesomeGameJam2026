@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f9cf66ae3dc66bb4b862121c34c1fd79
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/ParameterReader.cs
+  uploadId: 987276

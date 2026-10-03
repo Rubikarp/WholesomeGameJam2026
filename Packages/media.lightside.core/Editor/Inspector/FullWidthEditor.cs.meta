@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3e7c1bf119fb4d029856367f3e7b24b8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Inspector/FullWidthEditor.cs
+  uploadId: 987276

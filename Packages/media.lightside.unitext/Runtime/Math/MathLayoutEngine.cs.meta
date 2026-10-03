@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e975172bd41cd044c886e9252180945f
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Math/MathLayoutEngine.cs
+  uploadId: 987276

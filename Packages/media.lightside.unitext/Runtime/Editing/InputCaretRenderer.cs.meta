@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b08b2d6523db25e4b8e7d8a4c91d37f2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/InputCaretRenderer.cs
+  uploadId: 987276

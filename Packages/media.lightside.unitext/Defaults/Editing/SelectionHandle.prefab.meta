@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fee8334900fdf41409c42b791e3edf5f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Defaults/Editing/SelectionHandle.prefab
+  uploadId: 987276

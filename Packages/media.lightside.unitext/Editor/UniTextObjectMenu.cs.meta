@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 56de6f82682fe94418c1f55ca3a2382e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/UniTextObjectMenu.cs
+  uploadId: 987276

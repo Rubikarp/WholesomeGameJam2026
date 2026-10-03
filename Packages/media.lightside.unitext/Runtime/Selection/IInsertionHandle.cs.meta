@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 25a18fd6c4c34459a772c6b769f0d86b
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Selection/IInsertionHandle.cs
+  uploadId: 987276

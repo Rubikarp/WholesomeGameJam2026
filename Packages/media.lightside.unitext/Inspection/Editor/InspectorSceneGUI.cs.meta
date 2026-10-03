@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: dedca5d207730d244a7e808695dee573
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Inspection/Editor/InspectorSceneGUI.cs
+  uploadId: 987276

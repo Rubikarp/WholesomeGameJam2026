@@ -588,7 +588,25 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: UNITEXT
+    EmbeddedLinux: UNITEXT
+    GameCoreScarlett: UNITEXT
+    GameCoreXboxOne: UNITEXT
+    Kepler: UNITEXT
+    LinuxHeadlessSimulation: UNITEXT
+    Nintendo Switch: UNITEXT
+    Nintendo Switch 2: UNITEXT
+    PS4: UNITEXT
+    PS5: UNITEXT
+    QNX: UNITEXT
+    Standalone: UNITEXT
+    VisionOS: UNITEXT
+    WebGL: UNITEXT
+    Windows Store Apps: UNITEXT
+    XboxOne: UNITEXT
+    iPhone: UNITEXT
+    tvOS: UNITEXT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -687,11 +705,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 92bea745-52c1-4c4f-9f19-92f52e33aa2b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: WholesomeGameJam2026
+  organizationId: alexis_moroz_wg
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

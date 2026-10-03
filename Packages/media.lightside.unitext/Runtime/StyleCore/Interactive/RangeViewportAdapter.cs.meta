@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 7f8fc2c908c645079ad1b5daf9a8123e
+timeCreated: 1784880005
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Interactive/RangeViewportAdapter.cs
+  uploadId: 987276

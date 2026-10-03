@@ -1,0 +1,28 @@
+{
+    "name": "LightSide.UniText.Editor.SBP",
+    "rootNamespace": "LightSide.Editor.SBP",
+    "references": [
+        "LightSide.UniText",
+        "LightSide.UniText.Editor",
+        "Unity.ScriptableBuildPipeline.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITEXT_HAS_SBP"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.scriptablebuildpipeline",
+            "expression": "1.21.0",
+            "define": "UNITEXT_HAS_SBP"
+        }
+    ],
+    "noEngineReferences": false
+}

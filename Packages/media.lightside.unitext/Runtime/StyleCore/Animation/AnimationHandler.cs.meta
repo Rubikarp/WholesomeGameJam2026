@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3315397fe60e70c4dadd5a3a84ef4dc5
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Animation/AnimationHandler.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 2b819f38f01586d459d625dea1b3cc3e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Components/FocusGuard.cs
+  uploadId: 987276

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2242521c80e242e289b34828e446121c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 946685d9f3e4a9f45ab75f833a5254b1, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/ModifierGraphPreset.cs
+  uploadId: 987276

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 06df09ab9dfc43608f2b563fb60f63e6
+timeCreated: 1787486400
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/Migration/TmpSpriteMigrator.cs
+  uploadId: 987276

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c68c3ac94e6d4384ba61843fb4e27409
+timeCreated: 1784876400
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Inspector/InspectorFoldoutHeader.cs
+  uploadId: 987276

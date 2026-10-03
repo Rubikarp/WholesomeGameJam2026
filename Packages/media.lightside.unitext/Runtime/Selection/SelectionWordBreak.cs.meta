@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5b67ee2ddf34cbf49a359b8f17c897b8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Selection/SelectionWordBreak.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e23d8148d42b98546ae1c9feabfa6e9e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Gpu/GpuUpload.cs
+  uploadId: 987276

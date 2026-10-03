@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: da6dabb31945f4c42bd8b1e94e379b25
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/NativePlatform/UniTextCursor.cs
+  uploadId: 987276

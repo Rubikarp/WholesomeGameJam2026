@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b7d3fd8bd1474652a8a2d184a41c75f8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/NativePlatform/NativeFieldReplicaSession.cs
+  uploadId: 987276

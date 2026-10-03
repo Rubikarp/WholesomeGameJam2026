@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: ae9430c688cb82e4386268ea5ed16aa2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Migration/RenameManagedType.cs
+  uploadId: 987276

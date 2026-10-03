@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7f44eeeefb8d6e942a6e06d98be4c1f0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/PointEditing/BezierPathPointSet.cs
+  uploadId: 987276

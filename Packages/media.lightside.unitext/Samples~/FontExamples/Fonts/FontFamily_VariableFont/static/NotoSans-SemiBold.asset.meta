@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff335dd2c835aa442a777b967fa01ae1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/FontFamily_VariableFont/static/NotoSans-SemiBold.asset
+  uploadId: 987276

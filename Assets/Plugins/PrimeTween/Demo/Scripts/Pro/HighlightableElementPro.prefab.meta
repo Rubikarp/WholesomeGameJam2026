@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bc5b76b746564204e9e78d2e19947d25
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373496
+  packageName: "PrimeTween PRO \xB7 Code-Free Animations"
+  packageVersion: 1.4.12-pro
+  assetPath: Assets/Plugins/PrimeTween/Demo/Scripts/Pro/HighlightableElementPro.prefab
+  uploadId: 959074

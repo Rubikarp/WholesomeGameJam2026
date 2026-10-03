@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f5ac88594e8f5fc448e090d0cd47d8c9
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Input/PlatformKeySemantics.cs
+  uploadId: 987276

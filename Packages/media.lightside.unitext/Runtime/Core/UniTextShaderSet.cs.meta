@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: c52886d8fbc2a5e48bf3bb874922c139
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Core/UniTextShaderSet.cs
+  uploadId: 987276

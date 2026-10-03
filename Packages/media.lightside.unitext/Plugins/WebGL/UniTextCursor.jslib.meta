@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 2aa0f392e2b71ae4497dd5e4b5f04451
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Plugins/WebGL/UniTextCursor.jslib
+  uploadId: 987276

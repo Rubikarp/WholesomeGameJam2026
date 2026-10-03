@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3e07a8992869489d990e82153008ad6b
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Motion/Editor/LightSide.Motion.Editor.asmdef
+  uploadId: 987276

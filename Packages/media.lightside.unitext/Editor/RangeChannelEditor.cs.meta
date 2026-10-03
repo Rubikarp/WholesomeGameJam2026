@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a2a59467575b43cb88d03d7005d6b4dd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/RangeChannelEditor.cs
+  uploadId: 987276

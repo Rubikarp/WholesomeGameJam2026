@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: d1afeea4cabed944c9438a0bb01f4f84
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Rendering/CanvasChannels.cs
+  uploadId: 987276

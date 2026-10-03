@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 4d07432dd4c04d18ad78a5a3f08d0bc6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Parameters/RangeQueryDefinition.cs
+  uploadId: 987276

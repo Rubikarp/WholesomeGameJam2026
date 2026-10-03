@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e3fda0da0fab40bb958234e3aee02b71
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Unicode/WordBreak/UniTextWordBurst.cs
+  uploadId: 987276

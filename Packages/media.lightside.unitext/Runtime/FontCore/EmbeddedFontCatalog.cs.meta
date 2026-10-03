@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d7c0f1b1952e4d0b8008e72b6b04aec3
+timeCreated: 1786819200
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/FontCore/EmbeddedFontCatalog.cs
+  uploadId: 987276

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 19760ae53cf5b3344ba341539c8a7e5a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/Styles/Styles.unity
+  uploadId: 987276

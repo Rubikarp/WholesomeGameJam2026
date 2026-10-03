@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 24ee578cee7757a4f93cdbb3573fc839
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/TypingMarkupPolicy.cs
+  uploadId: 987276

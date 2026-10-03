@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: af7b825e8f1c79449a3193230b53883b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Defaults/Text (UniText).prefab
+  uploadId: 987276

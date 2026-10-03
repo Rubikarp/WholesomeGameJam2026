@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5d3d7877566d10c4e9ac3fb0dc068ecb
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Inspector/OptInParameterList.cs
+  uploadId: 987276

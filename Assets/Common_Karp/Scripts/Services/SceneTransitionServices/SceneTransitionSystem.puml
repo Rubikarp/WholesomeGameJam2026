@@ -1,0 +1,191 @@
+﻿@startuml SceneTransitionSystem
+
+skinparam shadowing false
+skinparam packageBackgroundColor WhiteSmoke
+skinparam class {
+    BackgroundColor<<MonoBehaviour>> LightBlue
+    BackgroundColor<<ScriptableObject>> LightYellow
+    BackgroundColor<<Interface>> LightGreen
+    BackgroundColor<<Struct>> WhiteSmoke
+    BackgroundColor<<Pure C#>> White
+    BackgroundColor<<Enum>> MistyRose
+}
+
+title SceneTransitionSystem - Unity Architecture
+
+package "Unity Engine" {
+    class MonoBehaviour <<MonoBehaviour>>
+    class ScriptableObject <<ScriptableObject>>
+}
+
+package "Effects" {
+    interface ITransitionEffect <<Interface>> {
+        + PlayInAsync(ct : CancellationToken) : Awaitable
+        + PlayOutAsync(ct : CancellationToken) : Awaitable
+    }
+
+    class FadeTransitionEffect <<MonoBehaviour>> {
+        - _canvasGroup : CanvasGroup
+        - _fadeDuration : float
+        + PlayInAsync(ct : CancellationToken) : Awaitable
+        + PlayOutAsync(ct : CancellationToken) : Awaitable
+    }
+
+    class WipeTransitionEffect <<MonoBehaviour>> {
+        - _wipeRect : RectTransform
+        - _wipeDuration : float
+        + PlayInAsync(ct : CancellationToken) : Awaitable
+        + PlayOutAsync(ct : CancellationToken) : Awaitable
+    }
+}
+
+package "Command" {
+    interface ISceneCommand <<Interface>> {
+        + ExecuteAsync(ct : CancellationToken) : Awaitable
+        + UndoAsync(ct : CancellationToken) : Awaitable
+        + CanUndo : bool
+    }
+
+    class GoToSceneCommand <<Pure C#>> {
+        - _request : STransitionRequest
+        - _previousRequest : STransitionRequest
+        - _executor : ITransitionExecutor
+        + CanUndo : bool
+        + ExecuteAsync(ct : CancellationToken) : Awaitable
+        + UndoAsync(ct : CancellationToken) : Awaitable
+    }
+
+    class SceneHistoryStack <<Pure C#>> {
+        - _stack : Stack
+        + CanGoBack : bool
+        + Push(command : ISceneCommand) : void
+        + Pop() : ISceneCommand
+        + Peek() : ISceneCommand
+        + Clear() : void
+    }
+}
+
+package "Service" {
+    interface ISceneTransitionService <<Interface>> {
+        + TransitionToAsync(request : STransitionRequest, ct : CancellationToken) : Awaitable
+        + GoBackAsync(ct : CancellationToken) : Awaitable
+        + CanGoBack : bool
+    }
+
+    interface ITransitionExecutor <<Interface>> {
+        + ExecuteTransitionAsync(request : STransitionRequest, ct : CancellationToken) : Awaitable
+    }
+
+    class SceneTransitionService <<MonoBehaviour>> {
+        - _transitionChannel : SceneTransitionChannel
+        - _backChannel : GoBackChannel
+        - _transitionEffects : List
+        - _historyStack : SceneHistoryStack
+        + OnTransitionStarted : UnityEvent
+        + OnTransitionCompleted : UnityEvent
+        + CanGoBack : bool
+        + TransitionToAsync(request : STransitionRequest, ct : CancellationToken) : Awaitable
+        + GoBackAsync(ct : CancellationToken) : Awaitable
+        + ExecuteTransitionAsync(request : STransitionRequest, ct : CancellationToken) : Awaitable
+    }
+
+    class LoadingScreenController <<MonoBehaviour>> {
+        - _progressBar : Slider
+        - _progressLabel : TMP_Text
+        + Show(ct : CancellationToken) : Awaitable
+        + Hide(ct : CancellationToken) : Awaitable
+        + UpdateProgress(progress : float) : void
+    }
+}
+
+package "Channels" {
+    class SceneTransitionChannel <<ScriptableObject>> {
+        + OnTransitionRequested : UnityEvent
+        + Raise(request : STransitionRequest) : void
+    }
+
+    class GoBackChannel <<ScriptableObject>> {
+        + OnGoBackRequested : UnityEvent
+        + Raise() : void
+    }
+
+    class ScenePayloadChannel <<ScriptableObject>> {
+        - _payload : ScriptableObject
+        + SetPayload(payload : ScriptableObject) : void
+        + GetPayload() : T
+        + Clear() : void
+    }
+}
+
+package "Triggers" {
+    class TransitionTrigger <<MonoBehaviour>> {
+        - _transitionChannel : SceneTransitionChannel
+        - _targetScene : SceneReference
+        - _effect : ETransitionEffect
+        + TriggerTransition() : void
+    }
+
+    class GoBackTrigger <<MonoBehaviour>> {
+        - _backChannel : GoBackChannel
+        + TriggerGoBack() : void
+    }
+}
+
+class STransitionRequest <<Struct>> {
+    + SceneReference : SceneReference
+    + Effect : ETransitionEffect
+    + LoadingScreenRequired : bool
+    + PushToHistory : bool
+    + Payload : ScriptableObject
+}
+
+enum ETransitionEffect <<Enum>> {
+    None
+    Fade
+    Wipe
+    CrossDissolve
+}
+
+' Unity base classes
+MonoBehaviour <|-- SceneTransitionService
+MonoBehaviour <|-- FadeTransitionEffect
+MonoBehaviour <|-- WipeTransitionEffect
+MonoBehaviour <|-- LoadingScreenController
+MonoBehaviour <|-- TransitionTrigger
+MonoBehaviour <|-- GoBackTrigger
+ScriptableObject <|-- SceneTransitionChannel
+ScriptableObject <|-- GoBackChannel
+ScriptableObject <|-- ScenePayloadChannel
+
+' Effects
+ITransitionEffect <|.. FadeTransitionEffect
+ITransitionEffect <|.. WipeTransitionEffect
+
+' Service interfaces
+ISceneTransitionService <|.. SceneTransitionService
+ITransitionExecutor <|.. SceneTransitionService
+
+' Command pattern
+ISceneCommand <|.. GoToSceneCommand
+GoToSceneCommand o-- ITransitionExecutor : uses
+GoToSceneCommand ..> STransitionRequest : holds
+SceneHistoryStack o-- ISceneCommand : stacks
+
+' Service wiring
+SceneTransitionService *-- SceneHistoryStack : owns
+SceneTransitionService *-- LoadingScreenController : owns
+SceneTransitionService o-- ITransitionEffect : aggregates
+SceneTransitionService o-- SceneTransitionChannel : listens
+SceneTransitionService o-- GoBackChannel : listens
+SceneTransitionService o-- ScenePayloadChannel : writes
+SceneTransitionService ..> GoToSceneCommand : creates
+
+' Triggers
+TransitionTrigger o-- SceneTransitionChannel : raises
+TransitionTrigger ..> STransitionRequest : creates
+GoBackTrigger o-- GoBackChannel : raises
+
+' Data
+STransitionRequest ..> ETransitionEffect : uses
+
+@enduml

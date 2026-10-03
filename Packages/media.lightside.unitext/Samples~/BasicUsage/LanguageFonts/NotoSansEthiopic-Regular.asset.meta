@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c196774831aa9c34496d2bfff3b49745
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/LanguageFonts/NotoSansEthiopic-Regular.asset
+  uploadId: 987276

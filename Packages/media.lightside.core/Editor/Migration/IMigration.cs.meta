@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7e9076c24a4a2a644b6aa3666c0c5d42
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Migration/IMigration.cs
+  uploadId: 987276

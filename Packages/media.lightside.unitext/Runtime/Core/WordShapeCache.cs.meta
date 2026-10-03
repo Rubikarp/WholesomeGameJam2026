@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 11d72eceea8d96a45b3c90750cb75687
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Core/WordShapeCache.cs
+  uploadId: 987276

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f98884f63101cdb43a545305c46a5ba2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 104e372bb32857a4996cb2fd82a2bec1, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/FontCore/UniTextFontVariant.cs
+  uploadId: 987276

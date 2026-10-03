@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 69bfd5f9fd214870842ed3a5e4c181f3
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/EditableText/DemoChatMessage.cs
+  uploadId: 987276

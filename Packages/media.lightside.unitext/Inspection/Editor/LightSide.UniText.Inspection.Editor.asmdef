@@ -1,0 +1,21 @@
+{
+    "name": "LightSide.UniText.Inspection.Editor",
+    "rootNamespace": "LightSide.Inspection",
+    "references": [
+        "LightSide.Core.Editor",
+        "LightSide.Core",
+        "LightSide.UniText",
+        "LightSide.UniText.Inspection"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

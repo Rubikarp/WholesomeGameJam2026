@@ -1,0 +1,41 @@
+{
+    "name": "LightSide.UniText",
+    "rootNamespace": "LightSide",
+    "references": [
+        "GUID:283c44d2715769af3e5038d7cabfa7f7",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "Unity.InputSystem",
+        "LightSide.Motion"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.modules.physics",
+            "expression": "",
+            "define": "UNITEXT_HAS_PHYSICS"
+        },
+        {
+            "name": "com.unity.modules.physics2d",
+            "expression": "",
+            "define": "UNITEXT_HAS_PHYSICS2D"
+        },
+        {
+            "name": "com.unity.ugui",
+            "expression": "2.6.0",
+            "define": "UNITEXT_UGUI_2_6"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "UNITEXT_INPUTSYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

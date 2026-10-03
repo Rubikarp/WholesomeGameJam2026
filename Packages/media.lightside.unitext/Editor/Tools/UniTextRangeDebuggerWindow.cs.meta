@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: a21b8917a2a749bab6478211613f4bed
+timeCreated: 1784880009
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/Tools/UniTextRangeDebuggerWindow.cs
+  uploadId: 987276

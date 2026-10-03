@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 35da4f722f7f85b47a2ffba10febab94
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/SceneEditing/SceneTextFormatting.cs
+  uploadId: 987276

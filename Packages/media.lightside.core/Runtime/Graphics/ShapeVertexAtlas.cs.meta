@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 0fe2cc0b59f97a04e842f9057d22fc2d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Graphics/ShapeVertexAtlas.cs
+  uploadId: 987276

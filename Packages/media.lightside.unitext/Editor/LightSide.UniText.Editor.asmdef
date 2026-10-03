@@ -1,0 +1,23 @@
+{
+    "name": "LightSide.UniText.Editor",
+    "rootNamespace": "LightSide.Editor",
+    "references": [
+        "GUID:6572381e8157783499bf6ce8f56b9292",
+        "GUID:283c44d2715769af3e5038d7cabfa7f7",
+        "GUID:ff9b3fc13fb113ea48e24bcd5c907d45",
+        "UnityEditor.UI",
+        "LightSide.Motion",
+        "LightSide.Motion.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

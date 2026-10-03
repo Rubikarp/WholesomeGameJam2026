@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5ab37c6eb13e8b84c9bea4000a6fa907
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/AssetMigration/Migrations/DefaultTextHighlighterMigration.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 183ada6700a89184e875909ae018bbeb
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Gpu/Atlas/GpuAtlasContracts.cs
+  uploadId: 987276

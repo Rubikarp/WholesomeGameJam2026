@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 531c6a513497f834e970dc023f501180
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Inspector/EditorVectorDragField.cs
+  uploadId: 987276

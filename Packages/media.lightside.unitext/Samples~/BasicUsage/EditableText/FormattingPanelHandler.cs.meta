@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 385aaa51f26991f4595e5997c2589ac2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/BasicUsage/EditableText/FormattingPanelHandler.cs
+  uploadId: 987276

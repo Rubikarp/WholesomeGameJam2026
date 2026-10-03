@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f6eaaec4220748846a87d7403b986989
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 338646
+  packageName: Flexible UI Suite - Procedural UI, UI Blur, And More!
+  packageVersion: FI 3.0.0, FB 1.3.0, FG 1.1.0
+  assetPath: Assets/Plugins/FlexibleUI/FlexibleBlur/AI/Skills/flexible-blur-layer-stack-and-punch-through/references/single-camera-stacking.md
+  uploadId: 988146

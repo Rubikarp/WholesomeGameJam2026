@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a306bc88f988ced48b2f20084320cdb8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/UniTextEditable_Selection.cs
+  uploadId: 987276

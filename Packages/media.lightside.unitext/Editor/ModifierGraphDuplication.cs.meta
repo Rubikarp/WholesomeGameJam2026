@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 53d4b7a9c1e84f7da924e6b18f0c2a75
+timeCreated: 1785556800
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/ModifierGraphDuplication.cs
+  uploadId: 987276

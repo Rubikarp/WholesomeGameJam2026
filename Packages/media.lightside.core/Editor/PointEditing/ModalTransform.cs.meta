@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: ef5babb70f2a3c34881c729c0bcde8a3
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/PointEditing/ModalTransform.cs
+  uploadId: 987276

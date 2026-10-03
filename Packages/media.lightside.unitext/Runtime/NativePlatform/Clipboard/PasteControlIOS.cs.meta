@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: da3008bf4d51fb14aac4d02b62018880
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/NativePlatform/Clipboard/PasteControlIOS.cs
+  uploadId: 987276

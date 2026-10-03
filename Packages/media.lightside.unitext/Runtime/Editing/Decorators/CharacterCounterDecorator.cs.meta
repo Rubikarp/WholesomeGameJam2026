@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 1112786a4bce6a74dae8028865727a83
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Decorators/CharacterCounterDecorator.cs
+  uploadId: 987276

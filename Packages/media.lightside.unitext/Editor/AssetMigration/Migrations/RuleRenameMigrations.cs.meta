@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a96d9817d00e44ccbbaa7ce4c7a153ae
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/AssetMigration/Migrations/RuleRenameMigrations.cs
+  uploadId: 987276

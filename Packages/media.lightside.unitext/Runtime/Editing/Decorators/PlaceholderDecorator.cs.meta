@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3bf93b93e1213ef4cbdd74437dd0a7e8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Decorators/PlaceholderDecorator.cs
+  uploadId: 987276

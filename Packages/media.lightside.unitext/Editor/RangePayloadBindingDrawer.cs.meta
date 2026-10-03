@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: cee97ba23e35437f852556ea77a84eaa
+timeCreated: 1784880010
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/RangePayloadBindingDrawer.cs
+  uploadId: 987276

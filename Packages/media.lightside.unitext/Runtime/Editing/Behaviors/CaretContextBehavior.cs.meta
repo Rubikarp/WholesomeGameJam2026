@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5c9895986af9e4c43bfc783336954168
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Behaviors/CaretContextBehavior.cs
+  uploadId: 987276

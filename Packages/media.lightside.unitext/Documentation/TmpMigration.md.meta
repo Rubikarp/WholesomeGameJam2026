@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e08af13c328d4749902edd3c79656498
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Documentation/TmpMigration.md
+  uploadId: 987276

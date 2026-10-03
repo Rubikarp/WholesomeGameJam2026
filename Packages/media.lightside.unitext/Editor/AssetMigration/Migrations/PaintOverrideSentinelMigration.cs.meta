@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e03882e2a72c1714db5538dc5db539a0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/AssetMigration/Migrations/PaintOverrideSentinelMigration.cs
+  uploadId: 987276

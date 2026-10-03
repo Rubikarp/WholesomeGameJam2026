@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 07153ece8e0d51e46a9370fc07c8c141
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Input/TextMeasure.cs
+  uploadId: 987276

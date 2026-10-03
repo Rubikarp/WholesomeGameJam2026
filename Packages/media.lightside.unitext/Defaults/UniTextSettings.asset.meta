@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4ffa3b4aed7e8d242aaf2ed76fadfeb0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Defaults/UniTextSettings.asset
+  uploadId: 987276

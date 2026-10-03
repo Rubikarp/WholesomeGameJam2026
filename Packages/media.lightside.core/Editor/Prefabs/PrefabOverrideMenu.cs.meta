@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7c41ab90d6e34f2a8b1c5d70e4f39a62
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Prefabs/PrefabOverrideMenu.cs
+  uploadId: 987276

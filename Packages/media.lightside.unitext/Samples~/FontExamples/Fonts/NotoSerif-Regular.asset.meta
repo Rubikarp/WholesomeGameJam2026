@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 93547b1ce6da2874e93fe6698c99fbda
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/NotoSerif-Regular.asset
+  uploadId: 987276

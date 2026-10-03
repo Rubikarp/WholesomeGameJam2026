@@ -1,0 +1,19 @@
+{
+    "name": "LightSide.UniText.Samples",
+    "rootNamespace": "LightSide.Samples",
+    "references": [
+        "GUID:283c44d2715769af3e5038d7cabfa7f7",
+        "GUID:6572381e8157783499bf6ce8f56b9292",
+        "Unity.InputSystem",
+        "LightSide.Motion"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 6e9549774098494893cbfa6b15453cf2
+timeCreated: 1764945052
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Unicode/Grapheme/GraphemeBreaker.cs
+  uploadId: 987276

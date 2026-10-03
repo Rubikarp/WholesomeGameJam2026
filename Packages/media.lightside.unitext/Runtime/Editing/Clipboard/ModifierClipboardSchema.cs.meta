@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a57e7b385bd6bab418e1e0e4a37ad636
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Clipboard/ModifierClipboardSchema.cs
+  uploadId: 987276

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b6c709dac10c63b40bc5dd47ce067262
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Shaders/Templates/Examples/LightSide_Custom-World-Dissolve.shader
+  uploadId: 987276

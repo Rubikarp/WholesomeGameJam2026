@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cf6faba06df23464a9ba2fe778a4ad3f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/Styles/ModRegisterConfig.asset
+  uploadId: 987276

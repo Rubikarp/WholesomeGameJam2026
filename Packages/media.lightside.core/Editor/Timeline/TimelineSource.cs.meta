@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 0ee8292478e24014ebdd297f56ae3418
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Timeline/TimelineSource.cs
+  uploadId: 987276

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 22148c1312f2d4c4f83482e3c89aa97a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Rules/SeparatorParseRule.cs
+  uploadId: 987276

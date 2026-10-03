@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2311adf5c9e080146aa8c4ad8603c019
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Shaders/Templates/Examples/LightSide_Effect-Rainbow.hlsl
+  uploadId: 987276

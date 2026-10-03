@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 48c3e09daf55b9646859dbf22e252cd7
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Commands/LightSideCommands.cs
+  uploadId: 987276

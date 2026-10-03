@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 26302f8be1abf7e43abd99b750376726
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Plugins/iOS/UniTextPasteControl.mm
+  uploadId: 987276

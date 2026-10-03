@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3aa3269237f81cd47a4d8ec51e0c20c7
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Paint/InlinePaintProvider.cs
+  uploadId: 987276

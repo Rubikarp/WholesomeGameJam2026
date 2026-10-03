@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 88c4d6a6bd2a40aa9b9fe1ea111fb7a5
+timeCreated: 1784790005
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Paint/PaintResolver.cs
+  uploadId: 987276

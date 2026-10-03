@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 4e4ec51a6b9149d4ebe96b0ba9d2c601
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Decoration/RangeDecorationGraphic.cs
+  uploadId: 987276

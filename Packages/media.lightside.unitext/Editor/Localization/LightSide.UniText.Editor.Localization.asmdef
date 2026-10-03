@@ -1,0 +1,27 @@
+{
+    "name": "LightSide.UniText.Editor.Localization",
+    "rootNamespace": "LightSide.Editor.Localization",
+    "references": [
+        "LightSide.UniText",
+        "Unity.Localization"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITEXT_HAS_LOCALIZATION"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.localization",
+            "expression": "",
+            "define": "UNITEXT_HAS_LOCALIZATION"
+        }
+    ],
+    "noEngineReferences": false
+}

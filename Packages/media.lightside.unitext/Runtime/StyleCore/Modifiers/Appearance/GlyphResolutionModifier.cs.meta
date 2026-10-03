@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: d6e8466fcd609b042b59c6c689dbba61
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Modifiers/Appearance/GlyphResolutionModifier.cs
+  uploadId: 987276

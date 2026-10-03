@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c43fc1a9d4b493742954f9e3e8a00663
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/Languages/NotoSansThai-Regular.asset
+  uploadId: 987276

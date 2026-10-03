@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5d420a3da22978843ad800f98b57fdda
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Hashing/HashNoise.cs
+  uploadId: 987276

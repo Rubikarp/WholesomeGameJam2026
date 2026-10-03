@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3a1bc80a5ad2c1e4fba57047c52a4cbb
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Inspection/Runtime/TextInspectionProbe.cs
+  uploadId: 987276

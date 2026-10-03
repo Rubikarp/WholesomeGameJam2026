@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 9ff8510c122248e4399d51cd92c65316
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Selection/IMagnifier.cs
+  uploadId: 987276

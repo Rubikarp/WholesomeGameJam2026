@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e58d5ca82d44b45418776dddd894a838
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/Font Awesome 7 Free-Solid-900.asset
+  uploadId: 987276

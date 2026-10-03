@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 418fd787e99e4fbda40e25898cb61ea2
+timeCreated: 1784876401
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Interactive/RangeInteractionChannel.cs
+  uploadId: 987276

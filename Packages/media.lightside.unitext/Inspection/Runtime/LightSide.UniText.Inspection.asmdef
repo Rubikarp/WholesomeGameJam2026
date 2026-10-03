@@ -1,0 +1,19 @@
+{
+    "name": "LightSide.UniText.Inspection",
+    "rootNamespace": "LightSide.Inspection",
+    "references": [
+        "LightSide.Core",
+        "LightSide.UniText"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "DEBUG"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 615cb2764db84d8495a3124e578fae7e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Unicode/Grapheme/UniTextGraphemeBurst.cs
+  uploadId: 987276

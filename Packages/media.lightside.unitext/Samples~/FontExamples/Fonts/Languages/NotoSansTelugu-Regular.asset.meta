@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba7e21acdbc30db429c99cbea0a53f6b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/Languages/NotoSansTelugu-Regular.asset
+  uploadId: 987276

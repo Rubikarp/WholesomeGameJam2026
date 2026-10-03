@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: aca7263a88c7a214eb4dde0aed8c6857
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Collections/FastIntDictionary.cs
+  uploadId: 987276

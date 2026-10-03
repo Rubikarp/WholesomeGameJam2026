@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9771d87fa2dae8a46a2f628c14c01f5a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Shaders/Templates/Examples/LightSide_Custom-Hologram.shader
+  uploadId: 987276

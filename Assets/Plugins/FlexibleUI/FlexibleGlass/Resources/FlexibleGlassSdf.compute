@@ -1,0 +1,451 @@
+#pragma kernel RasterizeMask
+#pragma kernel RasterizeSpriteMesh
+#pragma kernel Initialize
+#pragma kernel JumpFlood
+#pragma kernel FilterNormalsHorizontal
+#pragma kernel FilterNormalsVertical
+#pragma kernel Finalize
+#pragma kernel GenerateMip
+#pragma target 4.5
+
+Texture2D<float4> _MaskTex;
+SamplerState sampler_MaskTex;
+Texture2D<float> _MaskRead;
+Texture2D<float2> _SeedRead;
+Texture2D<float2> _NormalRead;
+Texture2DArray<float4> _FieldRead;
+RWTexture2D<float> _MaskWrite;
+RWTexture2D<float2> _SeedWrite;
+RWTexture2D<float2> _NormalWrite;
+RWTexture2DArray<float4> _FieldWrite;
+RWTexture2DArray<float4> _MipWrite;
+
+int _GenerationWidth;
+int _GenerationHeight;
+int _OutputResolution;
+int _Jump;
+int _ShapeSource;
+int _ShapeType;
+int _FieldSlice;
+int _MipResolution;
+int _SourceMip;
+float2 _Size;
+float2 _Padding;
+float4 _CornerRadii;
+float4 _CornerShape;
+float4 _TextureUv;
+float _AlphaThreshold;
+
+struct SpriteTriangle
+{
+    float4 origin;
+    float4 axisU;
+    float4 axisV;
+};
+StructuredBuffer<SpriteTriangle> _SpriteTriangles;
+StructuredBuffer<uint2> _SpriteTiles;
+
+float2 PixelToLocal(float2 pixel)
+{
+    return pixel / float2(_GenerationWidth, _GenerationHeight) * (_Size + 2.0f * _Padding) - _Padding;
+}
+
+float BoxMask(float2 position, float2 size)
+{
+    const float4 edge = float4(position, size - position);
+    return min(min(edge.x, edge.y), min(edge.z, edge.w));
+}
+
+float SquircleCornerMask(float2 delta, float radius, float exponent)
+{
+    const float2 absoluteValue = abs(delta);
+    const float valueScale = max(absoluteValue.x, absoluteValue.y);
+    float mask = radius;
+    if (!(valueScale <= 1e-6f))
+    {
+        const float2 scaledValue = absoluteValue / valueScale;
+        const float2 powers = pow(scaledValue, exponent);
+        const float powerSum = max(powers.x + powers.y, 1e-20f);
+        mask = radius - valueScale * pow(powerSum, rcp(exponent));
+    }
+    return mask;
+}
+
+float ConcavityCornerMask(float2 delta, float radius, float concavity)
+{
+    const float deltaLength = length(delta);
+    const float curved = radius - deltaLength;
+    const float flat = radius - 2.0f / 3.0f * (delta.x + delta.y);
+    return lerp(curved, flat, concavity);
+}
+
+float PerCornerMask(float2 position)
+{
+    float mask = BoxMask(position, _Size);
+    const float4 edge = float4(position, _Size - position);
+    [branch] if (_ShapeType < 2)
+    {
+        if (_CornerRadii.x > 0.0f && all(edge.xw < _CornerRadii.x))
+            mask = min(mask, ConcavityCornerMask(_CornerRadii.x - edge.xw, _CornerRadii.x, _CornerShape.x));
+        if (_CornerRadii.y > 0.0f && all(edge.zw < _CornerRadii.y))
+            mask = min(mask, ConcavityCornerMask(_CornerRadii.y - edge.zw, _CornerRadii.y, _CornerShape.y));
+        if (_CornerRadii.z > 0.0f && all(edge.xy < _CornerRadii.z))
+            mask = min(mask, ConcavityCornerMask(_CornerRadii.z - edge.xy, _CornerRadii.z, _CornerShape.z));
+        if (_CornerRadii.w > 0.0f && all(edge.zy < _CornerRadii.w))
+            mask = min(mask, ConcavityCornerMask(_CornerRadii.w - edge.zy, _CornerRadii.w, _CornerShape.w));
+    }
+    else
+    {
+        if (_CornerRadii.x > 0.0f && all(edge.xw < _CornerRadii.x))
+            mask = min(mask, SquircleCornerMask(_CornerRadii.x - edge.xw, _CornerRadii.x, _CornerShape.x));
+        if (_CornerRadii.y > 0.0f && all(edge.zw < _CornerRadii.y))
+            mask = min(mask, SquircleCornerMask(_CornerRadii.y - edge.zw, _CornerRadii.y, _CornerShape.y));
+        if (_CornerRadii.z > 0.0f && all(edge.xy < _CornerRadii.z))
+            mask = min(mask, SquircleCornerMask(_CornerRadii.z - edge.xy, _CornerRadii.z, _CornerShape.z));
+        if (_CornerRadii.w > 0.0f && all(edge.zy < _CornerRadii.w))
+            mask = min(mask, SquircleCornerMask(_CornerRadii.w - edge.zy, _CornerRadii.w, _CornerShape.w));
+    }
+    return mask;
+}
+
+float ShapeMask(float2 position)
+{
+    float mask = 0.0f;
+    if (_ShapeType == 0)
+    {
+        const float radius = _CornerRadii.x;
+        const float2 edge = min(position, _Size - position);
+        if (radius <= 0.0f || any(edge >= radius))
+            mask = BoxMask(position, _Size);
+        else
+            mask = SquircleCornerMask(radius - edge, radius, _CornerShape.x);
+    }
+    else
+        mask = PerCornerMask(position);
+    return mask;
+}
+
+float ReconstructedSpriteMask(float2 shapeUv)
+{
+    float mask = -1.0f;
+    if (!(any(shapeUv < 0.0f) || any(shapeUv > 1.0f)))
+    {
+        const float2 textureUv = lerp(_TextureUv.xy, _TextureUv.zw, shapeUv);
+        mask = _MaskTex.SampleLevel(sampler_MaskTex, textureUv, 0.0f).a - _AlphaThreshold;
+    }
+    return mask;
+}
+
+float SpriteMask(float2 position)
+{
+    const float2 shapeUv = position / max(_Size, 1e-5f);
+    return ReconstructedSpriteMask(shapeUv);
+}
+
+float Mask(float2 pixel)
+{
+    const float2 position = PixelToLocal(pixel);
+    return _ShapeSource == 0 ? ShapeMask(position) : SpriteMask(position);
+}
+
+float SeedDistanceSquared(float2 seed, float2 pixel)
+{
+    const float2 texelSize = (_Size + 2.0f * _Padding) / float2(_GenerationWidth, _GenerationHeight);
+    const float2 delta = (seed - pixel) * texelSize;
+    return dot(delta, delta);
+}
+
+float StoredMask(int2 pixel)
+{
+    float mask = -1.0f;
+    if (!(any(pixel < 0) || any(pixel >= int2(_GenerationWidth, _GenerationHeight))))
+        mask = _MaskRead.Load(int3(pixel, 0));
+    return mask;
+}
+
+float InterpolatedStoredMask(float2 pixel)
+{
+    const float2 position = pixel - 0.5f;
+    const int2 basePixel = floor(position);
+    const float2 blend = frac(position);
+    const float lowerLeft = StoredMask(basePixel);
+    const float lowerRight = StoredMask(basePixel + int2(1, 0));
+    const float upperLeft = StoredMask(basePixel + int2(0, 1));
+    const float upperRight = StoredMask(basePixel + 1);
+    return lerp(lerp(lowerLeft, lowerRight, blend.x), lerp(upperLeft, upperRight, blend.x), blend.y);
+}
+
+float2 InterpolatedStoredMaskGradient(float2 pixel)
+{
+    const float2 position = pixel - 0.5f;
+    const int2 basePixel = floor(position);
+    const float2 blend = frac(position);
+    const float lowerLeft = StoredMask(basePixel);
+    const float lowerRight = StoredMask(basePixel + int2(1, 0));
+    const float upperLeft = StoredMask(basePixel + int2(0, 1));
+    const float upperRight = StoredMask(basePixel + 1);
+    return float2(
+        lerp(lowerRight - lowerLeft, upperRight - upperLeft, blend.y),
+        lerp(upperLeft - lowerLeft, upperRight - lowerRight, blend.x));
+}
+
+[numthreads(8, 8, 1)]
+void RasterizeMask(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= uint2(_GenerationWidth, _GenerationHeight)))
+        return;
+
+    const float mask = Mask(id.xy + 0.5f);
+    _MaskWrite[id.xy] = mask;
+}
+
+[numthreads(8, 8, 1)]
+void RasterizeSpriteMesh(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= uint2(_GenerationWidth, _GenerationHeight)))
+        return;
+
+    const float2 shapeUv = PixelToLocal(id.xy + 0.5f) / max(_Size, 1e-5f);
+    float mask = -1.0f;
+    if (all(shapeUv >= 0.0f) && all(shapeUv <= 1.0f))
+    {
+        const uint2 tile = min((uint2)(shapeUv * 16.0f), 15u);
+        const uint2 range = _SpriteTiles[tile.y * 16u + tile.x];
+        [loop] for (uint index = range.x; index < range.x + range.y; index++)
+        {
+            const SpriteTriangle tri = _SpriteTriangles[index];
+            const float2 delta = shapeUv - tri.origin.xy;
+            const float2 weights = float2(dot(delta, tri.axisU.xy), dot(delta, tri.axisV.xy));
+            if (all(weights >= -1e-6f) && weights.x + weights.y <= 1.0f + 1e-6f)
+            {
+                const float2 textureUv = tri.origin.zw + weights.x * tri.axisU.zw + weights.y * tri.axisV.zw;
+                mask = _MaskTex.SampleLevel(sampler_MaskTex, textureUv, 0.0f).a - _AlphaThreshold;
+                break;
+            }
+        }
+    }
+    _MaskWrite[id.xy] = mask;
+}
+
+[numthreads(8, 8, 1)]
+void Initialize(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= uint2(_GenerationWidth, _GenerationHeight)))
+        return;
+
+    const int2 sourcePixel = id.xy;
+    const float2 pixel = sourcePixel + 0.5f;
+    const float center = StoredMask(sourcePixel);
+    float2 bestSeed = -1.0f;
+    float bestDistance = 1e30f;
+    if (abs(center) <= 1e-6f)
+    {
+        bestSeed = pixel;
+        bestDistance = 0.0f;
+    }
+
+    [unroll] for (int y = -1; y <= 1; y++)
+    {
+        [unroll] for (int x = -1; x <= 1; x++)
+        {
+            if (x == 0 && y == 0)
+                continue;
+            const float2 offset = float2(x, y);
+            const float neighbor = StoredMask(sourcePixel + int2(x, y));
+            if ((center >= 0.0f) == (neighbor >= 0.0f))
+                continue;
+            const float interpolation = abs(center) / max(abs(center) + abs(neighbor), 1e-6f);
+            const float2 seed = pixel + offset * interpolation;
+            const float distance = SeedDistanceSquared(seed, pixel);
+            if (distance < bestDistance)
+            {
+                bestDistance = distance;
+                bestSeed = seed;
+            }
+        }
+    }
+
+    _SeedWrite[id.xy] = bestSeed;
+}
+
+[numthreads(8, 8, 1)]
+void JumpFlood(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= uint2(_GenerationWidth, _GenerationHeight)))
+        return;
+
+    const int2 pixel = id.xy;
+    float2 bestSeed = _SeedRead.Load(int3(pixel, 0));
+    float bestDistance = all(bestSeed >= 0.0f) ? SeedDistanceSquared(bestSeed, pixel + 0.5f) : 1e30f;
+    [unroll] for (int y = -1; y <= 1; y++)
+    {
+        [unroll] for (int x = -1; x <= 1; x++)
+        {
+            const int2 samplePixel = pixel + int2(x, y) * _Jump;
+            if (any(samplePixel < 0) || any(samplePixel >= int2(_GenerationWidth, _GenerationHeight)))
+                continue;
+            const float2 seed = _SeedRead.Load(int3(samplePixel, 0));
+            if (any(seed < 0.0f))
+                continue;
+            const float distance = SeedDistanceSquared(seed, pixel + 0.5f);
+            if (distance < bestDistance)
+            {
+                bestDistance = distance;
+                bestSeed = seed;
+            }
+        }
+    }
+    _SeedWrite[pixel] = bestSeed;
+}
+
+// Gaussian sigma 0.75 generation texels, radius 3, composed with a central
+// difference. The two radius-4 filters reproduce the normal-only reference
+// without changing the mask used for seeding, distance, or coverage.
+static const float NormalFilterWeights[9] =
+{
+    0.0f, 0.0001784350521f, 0.0151942010740f, 0.2186736669898f,
+    0.5319073937682f, 0.2186736669898f, 0.0151942010740f, 0.0001784350521f, 0.0f
+};
+static const float NormalDerivativeWeights[9] =
+{
+    -0.0000892175261f, -0.0075971005370f, -0.1092476159688f, -0.2583565963471f,
+    0.0f, 0.2583565963471f, 0.1092476159688f, 0.0075971005370f, 0.0000892175261f
+};
+
+[numthreads(8, 8, 1)]
+void FilterNormalsHorizontal(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= uint2(_GenerationWidth, _GenerationHeight)))
+        return;
+
+    float2 filtered = 0.0f;
+    [unroll] for (int tap = 0; tap < 9; tap++)
+    {
+        const int2 pixel = clamp(int2(id.xy) + int2(tap - 4, 0), 0, int2(_GenerationWidth, _GenerationHeight) - 1);
+        const float mask = _MaskRead.Load(int3(pixel, 0));
+        filtered += mask * float2(NormalFilterWeights[tap], NormalDerivativeWeights[tap]);
+    }
+    _NormalWrite[id.xy] = filtered;
+}
+
+[numthreads(8, 8, 1)]
+void FilterNormalsVertical(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= uint2(_GenerationWidth, _GenerationHeight)))
+        return;
+
+    float2 gradient = 0.0f;
+    [unroll] for (int tap = 0; tap < 9; tap++)
+    {
+        const int2 pixel = clamp(int2(id.xy) + int2(0, tap - 4), 0, int2(_GenerationWidth, _GenerationHeight) - 1);
+        const float2 horizontal = _NormalRead.Load(int3(pixel, 0));
+        gradient += horizontal.yx * float2(NormalFilterWeights[tap], NormalDerivativeWeights[tap]);
+    }
+    _NormalWrite[id.xy] = gradient;
+}
+
+float2 InterpolatedFilteredMaskGradient(float2 pixel)
+{
+    const float2 position = pixel - 0.5f;
+    const int2 basePixel = floor(position);
+    const float2 blend = frac(position);
+    const int2 maximum = int2(_GenerationWidth, _GenerationHeight) - 1;
+    const float2 lowerLeft = _NormalRead.Load(int3(clamp(basePixel, 0, maximum), 0));
+    const float2 lowerRight = _NormalRead.Load(int3(clamp(basePixel + int2(1, 0), 0, maximum), 0));
+    const float2 upperLeft = _NormalRead.Load(int3(clamp(basePixel + int2(0, 1), 0, maximum), 0));
+    const float2 upperRight = _NormalRead.Load(int3(clamp(basePixel + 1, 0, maximum), 0));
+    return lerp(lerp(lowerLeft, lowerRight, blend.x), lerp(upperLeft, upperRight, blend.x), blend.y);
+}
+
+[numthreads(8, 8, 1)]
+void Finalize(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= (uint)_OutputResolution))
+        return;
+
+    const int2 generationResolution = int2(_GenerationWidth, _GenerationHeight);
+    const bool matchingResolution = all(generationResolution == _OutputResolution);
+    const float2 pixel = (id.xy + 0.5f) * generationResolution / _OutputResolution;
+    const int2 sourcePixel = floor(pixel);
+    const float mask = matchingResolution ? StoredMask(sourcePixel) : InterpolatedStoredMask(pixel);
+    const float signValue = mask >= 0.0f ? -1.0f : 1.0f;
+    float2 seed = matchingResolution ? _SeedRead.Load(int3(sourcePixel, 0)) : -1.0f;
+    float bestDistance = all(seed >= 0.0f) ? SeedDistanceSquared(seed, pixel) : 1e30f;
+    if (!matchingResolution)
+    {
+        [unroll] for (int y = -1; y <= 1; y++)
+        {
+            [unroll] for (int x = -1; x <= 1; x++)
+            {
+                const int2 samplePixel = sourcePixel + int2(x, y);
+                if (any(samplePixel < 0) || any(samplePixel >= generationResolution))
+                    continue;
+                const float2 candidate = _SeedRead.Load(int3(samplePixel, 0));
+                if (any(candidate < 0.0f))
+                    continue;
+                const float candidateDistance = SeedDistanceSquared(candidate, pixel);
+                if (candidateDistance >= bestDistance)
+                    continue;
+                bestDistance = candidateDistance;
+                seed = candidate;
+            }
+        }
+    }
+
+    const float2 texelSize = (_Size + 2.0f * _Padding) / generationResolution;
+    float distance = length(_Size + 2.0f * _Padding);
+    float2 gradient = 0.0f;
+    if (all(seed >= 0.0f))
+    {
+        const float2 delta = (pixel - seed) * texelSize;
+        distance = length(delta);
+        // Sprite alpha benefits from filtered reconstruction; procedural shape masks
+        // already have smooth gradients and retain their unfiltered reconstruction.
+        const float2 maskGradient = (_ShapeSource != 0 ? InterpolatedFilteredMaskGradient(seed) : InterpolatedStoredMaskGradient(seed)) / max(texelSize, 1e-6f);
+        if (dot(maskGradient, maskGradient) > 1e-8f)
+            gradient = -normalize(maskGradient);
+    }
+    if (dot(gradient, gradient) <= 1e-8f)
+    {
+        gradient = matchingResolution
+            ? float2(StoredMask(sourcePixel - int2(1, 0)) - StoredMask(sourcePixel + int2(1, 0)), StoredMask(sourcePixel - int2(0, 1)) - StoredMask(sourcePixel + int2(0, 1)))
+            : float2(InterpolatedStoredMask(pixel - float2(1.0f, 0.0f)) - InterpolatedStoredMask(pixel + float2(1.0f, 0.0f)), InterpolatedStoredMask(pixel - float2(0.0f, 1.0f)) - InterpolatedStoredMask(pixel + float2(0.0f, 1.0f)));
+        gradient = dot(gradient, gradient) > 1e-8f ? normalize(gradient) : float2(1.0f, 0.0f);
+    }
+    const float signedDistance = distance * signValue;
+    _FieldWrite[uint3(id.xy, _FieldSlice)] = float4(signedDistance, gradient, signedDistance);
+}
+
+[numthreads(8, 8, 1)]
+void GenerateMip(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= (uint)_MipResolution))
+        return;
+
+    const int2 source = id.xy * 2;
+    float4 field =
+    (
+        _FieldRead.Load(int4(source, _FieldSlice, _SourceMip)) +
+        _FieldRead.Load(int4(source + int2(1, 0), _FieldSlice, _SourceMip)) +
+        _FieldRead.Load(int4(source + int2(0, 1), _FieldSlice, _SourceMip)) +
+        _FieldRead.Load(int4(source + 1, _FieldSlice, _SourceMip))
+    ) * 0.25f;
+    const int sourceResolution = _MipResolution * 2;
+    const float weights[4] = { 0.125f, 0.375f, 0.375f, 0.125f };
+    float2 gradient = 0.0f;
+    float opticalDistance = 0.0f;
+    [unroll] for (int y = 0; y < 4; y++)
+    {
+        [unroll] for (int x = 0; x < 4; x++)
+        {
+            const int2 samplePixel = clamp(source + int2(x - 1, y - 1), 0, sourceResolution - 1);
+            const float4 sampleField = _FieldRead.Load(int4(samplePixel, _FieldSlice, _SourceMip));
+            const float sampleWeight = weights[x] * weights[y];
+            gradient += sampleField.yz * sampleWeight;
+            opticalDistance += sampleField.w * sampleWeight;
+        }
+    }
+    field.yz = gradient;
+    field.w = opticalDistance;
+    _MipWrite[uint3(id.xy, 0)] = field;
+}

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 3f7c1a92e84b4d5fb0c2a6417d5e9c21
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/InputBehaviorPresetEditor.cs
+  uploadId: 987276

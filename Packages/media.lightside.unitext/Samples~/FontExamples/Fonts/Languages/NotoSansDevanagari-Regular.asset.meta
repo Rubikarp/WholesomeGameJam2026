@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6d0ddb2a6ff6ae46989ec7de63143f4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Samples~/FontExamples/Fonts/Languages/NotoSansDevanagari-Regular.asset
+  uploadId: 987276

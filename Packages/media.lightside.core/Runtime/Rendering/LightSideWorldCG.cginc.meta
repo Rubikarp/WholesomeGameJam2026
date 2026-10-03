@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1625f3e263b04d91bcbf7612640e5786
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Rendering/LightSideWorldCG.cginc
+  uploadId: 987276

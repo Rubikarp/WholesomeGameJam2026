@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 789b4650f0c2c56458030a33d9caaed8
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Runtime/Rendering/LightSideGlyphCoverage.hlsl
+  uploadId: 987276

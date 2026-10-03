@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 03c2ae86016d38f4d8d148088014280a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/AttributeKeys.cs
+  uploadId: 987276

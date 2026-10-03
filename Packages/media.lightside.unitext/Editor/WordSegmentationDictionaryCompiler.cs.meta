@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 9c2ef845dd4c45628cf3c7adb2ad4413
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Editor/WordSegmentationDictionaryCompiler.cs
+  uploadId: 987276

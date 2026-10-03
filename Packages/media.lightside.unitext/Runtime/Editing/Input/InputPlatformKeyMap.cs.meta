@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 6cd50410e77a68048ae664aa2f719d9f
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/Editing/Input/InputPlatformKeyMap.cs
+  uploadId: 987276

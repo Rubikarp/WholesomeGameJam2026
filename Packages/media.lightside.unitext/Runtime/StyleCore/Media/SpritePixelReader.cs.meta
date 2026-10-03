@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 1f91f6ed794fc8e468dba097051bdf71
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.unitext/Runtime/StyleCore/Media/SpritePixelReader.cs
+  uploadId: 987276

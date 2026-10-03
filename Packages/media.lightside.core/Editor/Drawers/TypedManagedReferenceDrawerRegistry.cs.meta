@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f19c1f88f9d94cc4d819f7b9d5bccb8f
+AssetOrigin:
+  serializedVersion: 1
+  productId: 357844
+  packageName: "UniText Folio \u2014 Text Engine for Unity"
+  packageVersion: 3.5.0
+  assetPath: Packages/media.lightside.core/Editor/Drawers/TypedManagedReferenceDrawerRegistry.cs
+  uploadId: 987276
