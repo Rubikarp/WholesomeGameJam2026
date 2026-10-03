@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: BlackEelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: BlackEelHorse
-  horseSprite: {fileID: -2381880446304975095, guid: 3072c29f82062c24f9887119616720d8, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: -2381880446304975095, guid: 3072c29f82062c24f9887119616720d8, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: AlbinoEelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: AlbinoEelHorse
-  horseSprite: {fileID: -6122869712550025541, guid: f98c0cfab862a494d8d8169052985eee, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
   horseDescription: 
+  Visual: {fileID: -6122869712550025541, guid: f98c0cfab862a494d8d8169052985eee, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0
