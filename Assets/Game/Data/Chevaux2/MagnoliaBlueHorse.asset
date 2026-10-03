@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: CinnamonHorse
+  m_Name: MagnoliaBlueHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: Cinammon Horse
-  horseSprite: {fileID: -4967216429642142681, guid: a6a64957292ed534d9e90daf37769379, type: 3}
+  horseName: Magnolia Blue
+  horseSprite: {fileID: 5391443638163712088, guid: 632b6ab2c6d468042a8bc4b2efaefe04, type: 3}
   horseSpriteBestiary: {fileID: 0}
   captureDifficulty: 0
-  horseDescription: An horse who smells like cinnamon
+  horseDescription: This horse fusioned with a magic tree
