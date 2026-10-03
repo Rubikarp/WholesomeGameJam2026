@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: WhiteFrisonHorse
+  m_Name: MureneLeopardHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: White Frison
+  horseName: Murene Leopard
   rarity: 0
-  horseDescription: An icy Unicorn
-  Visual: {fileID: 3639927476724600948, guid: f06af8eab230b3c47a79444f5f9db04a, type: 3}
+  horseDescription: 
+  Visual: {fileID: 389752361509559200, guid: 55236204e2c5c464d935e0dc159f2ba4, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2
