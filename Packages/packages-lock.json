@@ -437,29 +437,6 @@
       "dependencies": {},
       "hash": "5401e5a7ebc4980a2b82141ffc26391a6547edd7"
     },
-    "media.lightside.core": {
-      "version": "file:media.lightside.core",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.burst": "1.6.0",
-        "com.unity.collections": "1.2.4",
-        "com.unity.mathematics": "1.2.6",
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.ui": "1.0.0"
-      }
-    },
-    "media.lightside.unitext": {
-      "version": "file:media.lightside.unitext",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "media.lightside.core": "3.5.0",
-        "com.unity.burst": "1.8.29",
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.ui": "1.0.0"
-      }
-    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
