@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: GrayHorse
+  m_Name: BlackHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  id: 2
-  horseName: Gray Horse
-  horseSprite: {fileID: 1783529767092708854, guid: 7f60d010fcf2bc7429d66297c5f7ca5c, type: 3}
+  id: 3
+  horseName: Black Horse
+  horseSprite: {fileID: 4122761871243735769, guid: 84eb491220e991740b8bc584333968b8, type: 3}
   horseSpriteBestiary: {fileID: 0}
-  horseDescription: A common horse of the mountains.
+  horseDescription: A common horse of the forest.
   captureDifficulty: 0
