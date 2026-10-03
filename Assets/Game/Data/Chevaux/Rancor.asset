@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: Rancor
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Rancor
-  horseSprite: {fileID: 6443576563441893535, guid: b17a5622008f8ec40ac37989b9b8ad93, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: 6443576563441893535, guid: b17a5622008f8ec40ac37989b9b8ad93, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

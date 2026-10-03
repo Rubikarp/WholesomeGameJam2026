@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: FrisonHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Frison Horse
-  horseSprite: {fileID: 1003345662683882684, guid: b9c61e9a3803ab84f84ef2be089774c9, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: 3639927476724600948, guid: f06af8eab230b3c47a79444f5f9db04a, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

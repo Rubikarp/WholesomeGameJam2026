@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: RibbonEelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: RibbonEelHorse
-  horseSprite: {fileID: -8290574964528350357, guid: 1cd3e6e15f119d7428a9a5a21e4ae3e1, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: -8290574964528350357, guid: 1cd3e6e15f119d7428a9a5a21e4ae3e1, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

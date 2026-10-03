@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: LibeccioHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Libeccio Horse
-  horseSprite: {fileID: 735271372989986865, guid: 15ac38ed91ed5c648939e6c9a55c5580, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: 735271372989986865, guid: 15ac38ed91ed5c648939e6c9a55c5580, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

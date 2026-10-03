@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: KabutoHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Kabuto Horse
-  horseSprite: {fileID: -6405335406994709907, guid: 9e87fd898ccc24d46804ff19176d874d, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: -6405335406994709907, guid: 9e87fd898ccc24d46804ff19176d874d, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

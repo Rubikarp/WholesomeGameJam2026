@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: PixelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Pixel Horse
-  horseSprite: {fileID: -467464085729575513, guid: 94eb431c670ff554793cf356d9942f3e, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
+  horseDescription: 
+  Visual: {fileID: -467464085729575513, guid: 94eb431c670ff554793cf356d9942f3e, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

@@ -12,9 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
   m_Name: WhiteHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  id: 4
   horseName: White Horse
-  horseSprite: {fileID: 7493352212308186224, guid: f9992f41143a63f4dacb4481d0c9ecb0, type: 3}
-  horseSpriteBestiary: {fileID: 0}
+  rarity: 0
   horseDescription: Henry IV's white horse.
-  captureDifficulty: 0
+  Visual: {fileID: 7493352212308186224, guid: f9992f41143a63f4dacb4481d0c9ecb0, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

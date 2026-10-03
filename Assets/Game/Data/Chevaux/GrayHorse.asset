@@ -12,9 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
   m_Name: GrayHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  id: 2
   horseName: Gray Horse
-  horseSprite: {fileID: 1783529767092708854, guid: 7f60d010fcf2bc7429d66297c5f7ca5c, type: 3}
-  horseSpriteBestiary: {fileID: 0}
+  rarity: 0
   horseDescription: A common horse of the mountains.
-  captureDifficulty: 0
+  Visual: {fileID: 1783529767092708854, guid: 7f60d010fcf2bc7429d66297c5f7ca5c, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0
