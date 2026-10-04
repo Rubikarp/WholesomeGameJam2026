@@ -1,11 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
+using UnityEngine;
 
 [RequireComponent(typeof(Button))]
 public class Zone : MonoBehaviour
@@ -19,7 +16,7 @@ public class Zone : MonoBehaviour
         button = GetComponent<Button>();
         button.onClick.AddListener(OnZoneClicked);
         
-        button.interactable = GameManager.Instance.AllLootedHorses.Count > capturesToUnlockNext;
+        button.interactable = GameManager.Instance.AllLootedHorses.Count >= capturesToUnlockNext;
     }
 
     public void OnZoneClicked()

@@ -3,13 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuAccueil : MonoBehaviour
 {
-public void Play()
-    {
-        SceneManager.LoadScene("Game");
-    }
+	public string sceneName = "Map";
+	
+	public void Play()
+	{
+		SceneManager.LoadScene(sceneName);
+	}
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
+	public void Quit()
+	{
+		Application.Quit();
+	}
 }

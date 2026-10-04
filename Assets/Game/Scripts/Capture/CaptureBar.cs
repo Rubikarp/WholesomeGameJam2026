@@ -84,6 +84,7 @@ public class CaptureBar : MonoBehaviour
 			acceleration = liftAcceleration;
 		}
 		playerPosition += acceleration * deltaTime;
+		playerPosition = Mathf.Clamp01(playerPosition);
 	}
 	
 	private void Refresh()
