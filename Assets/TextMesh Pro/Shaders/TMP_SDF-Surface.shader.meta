@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 38cf4322245e4f2479a78e6bcde513c1
+=======
+guid: f7ada0af4f174f0694ca6a487b8f543d
+>>>>>>> origin/horseData
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []

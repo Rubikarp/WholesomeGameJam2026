@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 200e87d383d2bab4ebcb0139d61b191f
+=======
+guid: 79459efec17a4d00a321bdcc27bbc385
+>>>>>>> origin/horseData
 timeCreated: 1484172856
 licenseType: Pro
 NativeFormatImporter:

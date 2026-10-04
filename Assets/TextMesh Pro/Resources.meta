@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d9b3152c9b1a69f409834a939a6002d2
+=======
+guid: 243e06394e614e5d99fab26083b707fa
+>>>>>>> origin/horseData
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
