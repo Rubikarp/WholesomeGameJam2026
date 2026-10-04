@@ -1,7 +1,6 @@
-﻿using System;
-using Alchemy.Inspector;
+﻿using UnityEngine.Events;
 using UnityEngine;
-using UnityEngine.Events;
+using Alchemy.Inspector;
 
 public enum ECaptureState
 {
@@ -14,6 +13,7 @@ public class HorseCaptureHandler : MonoBehaviour
 {
 	[Header("Value")]
 	public ECaptureState state;
+	public HorseData currentHorse = null;
 	
 	[Header("References")]
 	[SerializeField] private CaptureBar capture;
@@ -21,8 +21,9 @@ public class HorseCaptureHandler : MonoBehaviour
 	[SerializeField] private HorseApproach approach;
 	
 	[Header("Event")]
-	public UnityEvent<bool> onCaptureResult;
-
+	public UnityEvent<HorseData> onCaptureHorse;
+	public UnityEvent onHorseFled;
+	
 	private void Awake()
 	{
 		stress.onHorseFled.AddListener(OnFled);
@@ -32,9 +33,11 @@ public class HorseCaptureHandler : MonoBehaviour
 	[Button]
 	public void LaunchCapture(HorseData horse)
 	{
-		stress.Initialize(horse);
-		capture.Initialize(horse);
-		approach.Initialize(horse);	
+		currentHorse = horse;
+		
+		stress.Initialize(currentHorse);
+		capture.Initialize(currentHorse);
+		approach.Initialize(currentHorse);	
 		
 		state = ECaptureState.Capturing;
 	}
@@ -53,21 +56,16 @@ public class HorseCaptureHandler : MonoBehaviour
 			case ECaptureState.Ended:
 				return;
 		}
-		
 	}
 	
 	public void OnFled()
 	{
-		EndCapture(false);
+		state = ECaptureState.Ended;
+		onHorseFled?.Invoke();
 	}
 	public void OnHorseReached()
 	{
-		EndCapture(true);
-	}
-	
-	public void EndCapture(bool success)
-	{
 		state = ECaptureState.Ended;
-		onCaptureResult?.Invoke(success);
+		onCaptureHorse?.Invoke(currentHorse);
 	}
 }
