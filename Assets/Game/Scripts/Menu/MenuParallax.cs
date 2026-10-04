@@ -1,21 +1,23 @@
+using Alchemy.Inspector;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MenuParallax : MonoBehaviour
 {
-    public float offsetMultiplier = 1f;
-    public float smoothTime = 3f;
-
-    private Vector2 startPosition;
-    private Vector3 velocity;
+    private Camera _cam;
+    [SerializeField, ReadOnly] private Vector3 initialPos;
 
     private void Start()
     {
-        startPosition = transform.position;
+        _cam = Camera.main;
+        initialPos = transform.position;
     }
 
     private void Update()
     {
-        Vector2 offset = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        transform.position = Vector3.SmoothDamp(transform.position, startPosition + (offset * offsetMultiplier), ref velocity, smoothTime);
+        Vector2 offset = _cam.ScreenToViewportPoint(Mouse.current.position.ReadValue()) * 0.1f;
+        float offsetMultiplier = -transform.position.z;
+        
+        transform.position = initialPos + (Vector3)(offset * offsetMultiplier);
     }
 }
