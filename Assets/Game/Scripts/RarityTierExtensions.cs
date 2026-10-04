@@ -12,7 +12,7 @@ public enum RarityTier
 public static class RarityTierExtensions
 {
 	//Chance de drop
-	public static float RarityWeight(this RarityTier rarity)
+	public static float Weight(this RarityTier rarity)
 	{
 		float weight = rarity switch
 		{

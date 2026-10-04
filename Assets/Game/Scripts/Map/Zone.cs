@@ -1,48 +1,41 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
-[System.Serializable]
-public class HorsePool
-{
-    public HorseData horse;
-    public float weight = 1f;
-}
+[RequireComponent(typeof(Button))]
 public class Zone : MonoBehaviour
 {
-    public static event System.Action<HorseData> HorsePicked;
-
-    public List<HorsePool> horsePool = new List<HorsePool>();
+    private Button button;
+    public List<HorseData> horsePool = new List<HorseData>();
     public int capturesToUnlockNext = 3;
-    public string captureSceneName = "Capture";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
+        button = GetComponent<Button>();
+        button.onClick.AddListener(OnZoneClicked);
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        button.interactable = GameManager.Instance.AllLootedHorses.Count > capturesToUnlockNext;
     }
 
     public void OnZoneClicked()
     {
-        float totalWeight = 0f;
-        foreach (HorsePool entry in horsePool)
-            totalWeight += entry.weight;
+        float totalWeight = horsePool.Sum(horseData => horseData.rarity.Weight());
 
         float roll = Random.Range(0f, totalWeight);
-        foreach (HorsePool entry in horsePool)
+        foreach (HorseData horse in horsePool)
         {
-            roll -= entry.weight;
+            roll -= horse.rarity.Weight();
+            
             if (roll <= 0f)
             {
-                Debug.Log($"{entry.horse.horseName}");
-                HorsePicked?.Invoke(entry.horse);
-                SceneManager.LoadScene(captureSceneName);
+                GameManager.Instance.HorsePicked = horse;
+                Debug.Log($"Encounter horse : {horse.horseName}");
+                SceneManager.LoadScene("Capture");
                 return;
             }
         }

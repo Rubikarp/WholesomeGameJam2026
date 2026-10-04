@@ -1,4 +1,5 @@
-﻿using UnityEngine.Events;
+﻿using System;
+using UnityEngine.Events;
 using UnityEngine;
 using Alchemy.Inspector;
 
@@ -28,6 +29,11 @@ public class HorseCaptureHandler : MonoBehaviour
 	{
 		stress.onHorseFled.AddListener(OnFled);
 		approach.onHorseReached.AddListener(OnHorseReached);
+	}
+
+	private void Start()
+	{
+		LaunchCapture(currentHorse);
 	}
 
 	[Button]
