@@ -1,5 +1,5 @@
-﻿using System;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
+using UnityEngine.UI;
 using UnityEngine;
 using Alchemy.Inspector;
 
@@ -15,6 +15,7 @@ public class HorseCaptureHandler : MonoBehaviour
 	[Header("Value")]
 	public ECaptureState state;
 	public HorseData currentHorse = null;
+	public Image background = null;
 	
 	[Header("References")]
 	[SerializeField] private CaptureBar capture;
@@ -27,6 +28,8 @@ public class HorseCaptureHandler : MonoBehaviour
 	
 	private void Awake()
 	{
+		background.sprite = GameManager.Instance.CurrentZone;
+		currentHorse = GameManager.Instance.CurrentHorse;
 		stress.onHorseFled.AddListener(OnFled);
 		approach.onHorseReached.AddListener(OnHorseReached);
 	}
@@ -72,6 +75,7 @@ public class HorseCaptureHandler : MonoBehaviour
 	public void OnHorseReached()
 	{
 		state = ECaptureState.Ended;
+		GameManager.Instance.AllLootedHorses.Add(currentHorse);
 		onCaptureHorse?.Invoke(currentHorse);
 	}
 }

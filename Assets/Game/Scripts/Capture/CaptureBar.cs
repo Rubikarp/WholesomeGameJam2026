@@ -79,7 +79,7 @@ public class CaptureBar : MonoBehaviour
 	private void MovePlayer(float deltaTime)
 	{
 		float acceleration = -gravity;
-		if (Keyboard.current.spaceKey.IsPressed())
+		if(Keyboard.current.spaceKey.IsPressed() || Mouse.current.leftButton.IsPressed())
 		{
 			acceleration = liftAcceleration;
 		}

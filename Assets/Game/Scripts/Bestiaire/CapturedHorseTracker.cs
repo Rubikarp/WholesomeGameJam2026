@@ -1,24 +1,36 @@
+using System;
+using System.Linq;
+using Alchemy.Inspector;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class HorseTracker : MonoBehaviour
-{
-   public List<HorseData> Horses = new List<HorseData>();
-   public HorseData HorseToAdd;
+{ 
+   public HorseData HorseToTrack;
+   
+   public Image profilePicture;
+   public TextMeshProUGUI description;
+   public TextMeshProUGUI counter;
 
-   public void RegisterHorses(HorseData HorseToAdd) {
+   [Button]
+   private void OnEnable()
+   {
+      profilePicture.sprite = HorseToTrack.VisualBestiary;
 
-}
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        Horses.Add(HorseToAdd);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+      int captured = GameManager.Instance.AllLootedHorses.Count(h => h == HorseToTrack);
+      bool isUnlocked = captured > 0;
+      
+      counter.text = captured.ToString();
+      if (isUnlocked)
+      {
+         profilePicture.color = Color.white;
+         description.text = HorseToTrack.horseDescription;
+      }
+      else
+      {
+         profilePicture.color = Color.black;
+         description.text = "Apprivoise le cheval pour en savoir plus";
+      }
+   }
 }

@@ -32,6 +32,6 @@ public class CaptureResult : MonoBehaviour
 	
 	private void OnContinue()
 	{
-		SceneManager.LoadScene("Menu");
+		SceneManager.LoadScene("Map");
 	}
 }

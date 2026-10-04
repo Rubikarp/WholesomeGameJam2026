@@ -8,8 +8,9 @@ using UnityEngine;
 public class Zone : MonoBehaviour
 {
     private Button button;
-    public List<HorseData> horsePool = new List<HorseData>();
     public int capturesToUnlockNext = 3;
+    public Sprite zoneBackground = null;
+    public List<HorseData> horsePool = new List<HorseData>();
 
     private void Awake()
     {
@@ -30,7 +31,8 @@ public class Zone : MonoBehaviour
             
             if (roll <= 0f)
             {
-                GameManager.Instance.HorsePicked = horse;
+                GameManager.Instance.CurrentHorse = horse;
+                GameManager.Instance.CurrentZone = zoneBackground;
                 Debug.Log($"Encounter horse : {horse.horseName}");
                 SceneManager.LoadScene("Capture");
                 return;

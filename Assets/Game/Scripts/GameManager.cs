@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : PersistentSingleton<GameManager>
 {
-	public HorseData HorsePicked;
+	public Sprite CurrentZone;
+	public HorseData CurrentHorse;
 	public List<HorseData> AllLootedHorses = new List<HorseData>(32);
 }

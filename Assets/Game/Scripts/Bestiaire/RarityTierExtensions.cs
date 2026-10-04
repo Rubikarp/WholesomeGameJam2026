@@ -16,11 +16,11 @@ public static class RarityTierExtensions
 	{
 		float weight = rarity switch
 		{
-			RarityTier.Common => 10,
-			RarityTier.Uncommon => 5,
+			RarityTier.Common => 5,
+			RarityTier.Uncommon => 4,
 			RarityTier.Rare => 3,
 			RarityTier.Epic => 2,
-			RarityTier.Legendary => .1f,
+			RarityTier.Legendary => 1f,
 			_ => throw new ArgumentOutOfRangeException(nameof(rarity), rarity, $"Invalid RarityTier: {rarity}")
 		};
 		return weight;
