@@ -4,7 +4,7 @@ using Alchemy.Inspector;
 
 public class BasicSceneManagement : MonoBehaviour
 {
-	[SerializeField, NaughtyAttributes.Scene] private int scene;
+	[SerializeField] private int scene;
 
 	[Button]
 	public void LoadScene()

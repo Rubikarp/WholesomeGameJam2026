@@ -1,97 +1,51 @@
+using Alchemy.Inspector;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class HorseCaptureHandler : MonoBehaviour
+public class HorseStress : MonoBehaviour
 {
-	public enum ECaptureState
-	{
-		Wait,
-		Capturing,
-		Ended
-	}
-	[Header("Value")]
-	public ECaptureState state;
-	
-	[Header("References")]
-	public Image horseImage;
-	public Scrollbar approcheSlider;
-	public Scrollbar playerSlider;
-	public Scrollbar stressSlider;
-	public Scrollbar progressSlider;
-
-	[Header("Progression")] 
-	public float patternTime;
-	public float patternSpeed;
-	public float patternDuration;
-	public AnimationCurve approchePattern;
-	public AnimationCurve tolerancePattern;
-	
+	[Header("Références")]
+	[SerializeField] private Image stressFill;
+ 
 	[Header("Stress")]
-	public float stressValue = 0f;
-	public float stressThreshold = 100f;
-	
-	[Header("Rapprochement")]
-	public float traveledDistance = 0f;
-	public float horseDistance = 30f;
-	public float minSize = .3f;
-	public float maxSize = 4f;
-	
+	[SerializeField, Min(0.1f)] private float stressThreshold = 3f;
+	[SerializeField, Min(0f)] private float recoveryRate = 0.5f;
+	[SerializeField, ReadOnly] private float currentStress;
+	[SerializeField, ReadOnly] private float stressSensibility;
+ 
 	[Header("Event")]
-	public UnityEvent<bool> onCaptureResult;
-
-	public void LaunchCapture()
-	{
-		horseImage.transform.localScale = Vector3.one * minSize;
-	}
+	public UnityEvent onHorseFled;
 	
-	public void Update()
+	public void Initialize(HorseData horse)
 	{
-		switch(state)
+		stressSensibility = horse.stressSensibility;
+ 
+		if (stressSensibility <= 0f)
 		{
-			case ECaptureState.Wait:
-				return;
-			case ECaptureState.Capturing:
-				CaptureProgress(Time.deltaTime);
-				return;
-			case ECaptureState.Ended:
-				return;
+			Debug.LogWarning($"{horse.name} : stressSensibility <= 0, valeur 1 utilisée.", horse);
+			stressSensibility = 1f;
 		}
-		
+ 
+		currentStress = 0f;
+		stressFill.fillAmount = Mathf.Clamp01(currentStress / stressThreshold);
+		enabled = true;
 	}
 	
-	public void CaptureProgress(float deltaTime)
+	public void StressProgress(float deltaTime, bool isPlayerInZone)
 	{
-		patternTime += deltaTime * patternSpeed;
-		patternTime %= patternDuration;
-		
-		var approcheSpeed = approchePattern.Evaluate(patternTime);
-		var tolerance = tolerancePattern.Evaluate(patternTime);
-		approcheSlider.value = approcheSpeed;
-		approcheSlider.size = .5f * tolerance;
-		if(Mathf.Abs(playerSlider.value - approcheSlider.value) > approcheSlider.size * .5f)
+		if (isPlayerInZone)
 		{
-			stressValue += deltaTime;
-			if(stressValue > stressThreshold) EndCapture(false);
+			currentStress = Mathf.Max(0f, currentStress - recoveryRate * deltaTime);
 		}
 		else
 		{
-			stressValue -= deltaTime;
-			if(stressValue < 0) stressValue = 0;
-			
-			traveledDistance += deltaTime;
+			currentStress += stressSensibility * deltaTime;
 		}
-		
-		if(traveledDistance > horseDistance) EndCapture(true);
-		
-		//Refresh size
-		float progress = traveledDistance / horseDistance;
-		horseImage.transform.localScale = Vector3.one * Mathf.Lerp(minSize, maxSize, progress);
-	}
-	
-	public void EndCapture(bool success)
-	{
-		state = ECaptureState.Ended;
-		onCaptureResult?.Invoke(success);
+		stressFill.fillAmount = Mathf.Clamp01(currentStress / stressThreshold);
+		if (currentStress >= stressThreshold)
+		{
+			onHorseFled.Invoke();
+		}
 	}
 }
