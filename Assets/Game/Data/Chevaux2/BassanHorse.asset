@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: BassanHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Fou de Bassan
-  horseSprite: {fileID: 3834364988870508544, guid: 4de54e1b1a5c14041976977454a27200, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 1
   horseDescription: A pegasus who likes fishing
+  Visual: {fileID: 3834364988870508544, guid: 4de54e1b1a5c14041976977454a27200, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Fish Horse
   rarity: 0
-  horseDescription: 
+  horseDescription: One of the most practical horses, it can be mounted on the ground
+    but also undersea !
   Visual: {fileID: 1221428311284500757, guid: 63d38d728d7b0d245be813696f977483, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

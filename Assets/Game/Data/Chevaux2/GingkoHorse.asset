@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: GingkoHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Gingko Horse
-  horseSprite: {fileID: 1005467786653186310, guid: 08ee2072724b2784f94fc3a94cc0c829, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
-  horseDescription: An horse with golden flowers
+  rarity: 2
+  horseDescription: The golden flowers of this horse can cure many diseases
+  Visual: {fileID: 1005467786653186310, guid: 08ee2072724b2784f94fc3a94cc0c829, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PoinsettiaHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Poinsettia Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 3
+  horseDescription: Thoses horses migrate often from snowy places
   Visual: {fileID: -7933644310444569619, guid: 954c5c81d0f4177448203f1ebb9eb3fd, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

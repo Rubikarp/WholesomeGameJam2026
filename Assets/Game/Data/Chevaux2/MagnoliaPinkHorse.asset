@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: MagnoliaPinkHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Magnolia Pink
-  horseSprite: {fileID: 6977599052045144, guid: 9a222f2356c00044dadb41de43366dd7, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 0
   horseDescription: This horse fusioned with a magic tree
+  Visual: {fileID: 6977599052045144, guid: 9a222f2356c00044dadb41de43366dd7, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

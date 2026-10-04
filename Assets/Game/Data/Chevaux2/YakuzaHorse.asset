@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: YakuzaHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Yakuza Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 2
+  horseDescription: Each Yakuza horse has a different pattern on his coat. They like
+    fighting each other
   Visual: {fileID: -2270553096723831268, guid: bedddcfdc0cd18d408834a56c0846e58, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MureneLeopardHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Murene Leopard
-  rarity: 0
-  horseDescription: 
+  rarity: 2
+  horseDescription: This kind of murene his very rare. In addition of his dangerous
+    bite, they can use electric shocks if he feels in danger
   Visual: {fileID: 389752361509559200, guid: 55236204e2c5c464d935e0dc159f2ba4, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

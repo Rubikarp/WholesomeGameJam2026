@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class AddHorses : MonoBehaviour
+public class HorseTracker : MonoBehaviour
 {
    public List<HorseData> Horses = new List<HorseData>();
    public HorseData HorseToAdd;

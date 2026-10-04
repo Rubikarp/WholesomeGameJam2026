@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: CinnamonHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Cinammon Horse
-  horseSprite: {fileID: -4967216429642142681, guid: a6a64957292ed534d9e90daf37769379, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
-  horseDescription: An horse who smells like cinnamon
+  rarity: 2
+  horseDescription: An horse who smells like cinnamon rolls.
+  Visual: {fileID: -4967216429642142681, guid: a6a64957292ed534d9e90daf37769379, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

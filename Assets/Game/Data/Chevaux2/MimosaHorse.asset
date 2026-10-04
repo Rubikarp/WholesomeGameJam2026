@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Mimosa Horse
   rarity: 0
-  horseDescription: An horse with mimosa flowers on his body
-  Visual: {fileID: 0}
+  horseDescription: A very friendly horse that can serve you mimosa tea !
+  Visual: {fileID: -1573573935918686871, guid: 45ba28e686b7aee4c9ce47aede92d985, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2

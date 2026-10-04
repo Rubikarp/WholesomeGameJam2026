@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: Blood&WaterHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Blood and Water Horse
-  horseSprite: {fileID: -4182900505828528934, guid: 09cfb7b60f9b61b46a1639b81533c90f, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 4
   horseDescription: A horse made of water and blood
+  Visual: {fileID: -4182900505828528934, guid: 09cfb7b60f9b61b46a1639b81533c90f, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

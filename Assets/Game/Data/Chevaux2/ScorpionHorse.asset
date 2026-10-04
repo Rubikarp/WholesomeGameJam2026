@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Scorpion Horse
   rarity: 0
-  horseDescription: 
+  horseDescription: Beware of his tail !!
   Visual: {fileID: -4890564590637941437, guid: 0720b52c1dd65844393e61005a5fefaf, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: White Frison
   rarity: 0
-  horseDescription: An icy Unicorn
+  horseDescription: The spirits of the mountains created this Unicorn with their
+    magic
   Visual: {fileID: 3639927476724600948, guid: f06af8eab230b3c47a79444f5f9db04a, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

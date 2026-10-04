@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Polaire Horse
   rarity: 0
-  horseDescription: An icy Unicorn
+  horseDescription: His coat is very fluffy, perfect for a nap
   Visual: {fileID: -2464626729316592686, guid: 969e7eb204a714944995fff25f6d7a06, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

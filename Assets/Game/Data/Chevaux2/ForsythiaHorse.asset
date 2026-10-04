@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: ForsythiaHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Forsythia
-  horseSprite: {fileID: 1816755534951266333, guid: 172b74af1698a8447bed07147db7d01b, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
-  horseDescription: A horse with a thunder coat
+  rarity: 3
+  horseDescription: This horse received a blessing of a magic tree
+  Visual: {fileID: 1816755534951266333, guid: 172b74af1698a8447bed07147db7d01b, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0
