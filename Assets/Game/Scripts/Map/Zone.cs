@@ -41,7 +41,7 @@ public class Zone : MonoBehaviour
             if (roll <= 0f)
             {
                 Debug.Log($"{entry.horse.horseName}");
-                HorsePicked?.Invoke(entry.horse); // prévient tous les abonnés
+                HorsePicked?.Invoke(entry.horse);
                 SceneManager.LoadScene(captureSceneName);
                 return;
             }
