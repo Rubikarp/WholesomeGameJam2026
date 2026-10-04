@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: PixelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Pixel Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 4
+  horseDescription: This weird looking horse was only spotted once, barely visible
+    in the snow. She looks like she's from another age...
   Visual: {fileID: -467464085729575513, guid: 94eb431c670ff554793cf356d9942f3e, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

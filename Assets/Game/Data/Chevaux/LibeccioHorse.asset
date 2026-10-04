@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: LibeccioHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Libeccio Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 3
+  horseDescription: The embodiement of a strong wind in the desert. Those horses
+    are usually comfortable around humans, for some reasons
   Visual: {fileID: 735271372989986865, guid: 15ac38ed91ed5c648939e6c9a55c5580, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

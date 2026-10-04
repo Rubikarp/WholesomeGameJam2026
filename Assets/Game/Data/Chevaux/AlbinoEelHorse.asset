@@ -12,14 +12,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
   m_Name: AlbinoEelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: AlbinoEelHorse
-  rarity: 0
-  horseDescription: 
+  horseName: Albino Eel Horse
+  rarity: 2
+  horseDescription: 'An eel horse with a rare genetic condition, rarely found in
+    the depths of the sea. '
   Visual: {fileID: -6122869712550025541, guid: f98c0cfab862a494d8d8169052985eee, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.17571652
+      value: 0.14913058
+      inSlope: 0.9662603
+      outSlope: 0.9662603
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13561304
+    - serializedVersion: 3
+      time: 0.4505766
+      value: 0.59486854
+      inSlope: -1.7978534
+      outSlope: -1.7978534
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.044519044
+    - serializedVersion: 3
+      time: 0.633138
+      value: 0.7649514
+      inSlope: -0.96988237
+      outSlope: -0.96988237
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.089507245
+    - serializedVersion: 3
+      time: 1.2926291
+      value: 0.95800066
+      inSlope: -0.80771714
+      outSlope: -0.80771714
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5069663
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.3765941
+      value: 0.5626166
+      inSlope: -6.99901
+      outSlope: -6.99901
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.4901154
+      value: -0.001811862
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

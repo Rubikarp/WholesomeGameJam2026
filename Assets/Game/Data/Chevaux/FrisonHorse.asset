@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FrisonHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Frison Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 1
+  horseDescription: A beautiful white horse that can tolerate the strong cold of
+    the snowy plains. Why does it have a horn? Complete mystery.
   Visual: {fileID: 3639927476724600948, guid: f06af8eab230b3c47a79444f5f9db04a, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

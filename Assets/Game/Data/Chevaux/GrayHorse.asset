@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Gray Horse
   rarity: 0
-  horseDescription: A common horse of the mountains.
+  horseDescription: A common horse of the forest. Henry IV's white horse!
   Visual: {fileID: 1783529767092708854, guid: 7f60d010fcf2bc7429d66297c5f7ca5c, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

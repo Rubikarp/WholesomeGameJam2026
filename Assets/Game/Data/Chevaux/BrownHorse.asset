@@ -14,12 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Brown Horse
   rarity: 0
-  horseDescription: A common horse of the plains.
+  horseDescription: The most common type of horse out there, across the whole region.
   Visual: {fileID: 4430142057457245885, guid: 96ec1b5e2af17594caa2738723b31ff3, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9981613
+      value: 0.99001443
+      inSlope: -0.0035806112
+      outSlope: -0.0035806112
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.9952369
+      value: -0.0047628284
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

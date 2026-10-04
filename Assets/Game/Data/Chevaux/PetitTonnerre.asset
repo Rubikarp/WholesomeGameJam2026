@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: PetitTonnerre
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Petit Tonnerre
-  rarity: 0
-  horseDescription: 
+  rarity: 4
+  horseDescription: No one ever understood how a horse can possibly made out of electricity,
+    but Petit Tonnerre is here to prove that it is possible. You might want to think
+    twice before petting him though.
   Visual: {fileID: 2874107178839450748, guid: 076cae073ca67fd489f9706ed2990896, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

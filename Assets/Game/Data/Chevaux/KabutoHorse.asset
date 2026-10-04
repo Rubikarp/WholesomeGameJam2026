@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: KabutoHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Kabuto Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 3
+  horseDescription: The strange hybrid of a horse and a scarab.
   Visual: {fileID: -6405335406994709907, guid: 9e87fd898ccc24d46804ff19176d874d, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

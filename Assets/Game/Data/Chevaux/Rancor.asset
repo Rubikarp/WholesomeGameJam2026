@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Rancor
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Rancor
-  rarity: 0
-  horseDescription: 
+  rarity: 4
+  horseDescription: Probably the most powerful horse out there, Rancor decided that
+    the desert was his playground, and every single horse is terrified of him. He's
+    cool though, look at him go!
   Visual: {fileID: 6443576563441893535, guid: b17a5622008f8ec40ac37989b9b8ad93, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

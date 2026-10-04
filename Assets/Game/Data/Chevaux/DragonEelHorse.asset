@@ -13,13 +13,58 @@ MonoBehaviour:
   m_Name: DragonEelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Dragon Eel Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 1
+  horseDescription: A more stressed variant of the eel horse.
   Visual: {fileID: 5740085095101767299, guid: c477b560cd426ba4db7fe4f847a415a4, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.21316779
+      value: 0.40214387
+      inSlope: -3.1201174
+      outSlope: -3.1201174
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1530748
+      outWeight: 0.039616596
+    - serializedVersion: 3
+      time: 0.4203284
+      value: 0.8224669
+      inSlope: -0.63253474
+      outSlope: -0.63253474
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.061273735
+    - serializedVersion: 3
+      time: 0.6545488
+      value: 0.61387825
+      inSlope: 0.88603985
+      outSlope: 0.88603985
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9976196
+      value: 0.021428585
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

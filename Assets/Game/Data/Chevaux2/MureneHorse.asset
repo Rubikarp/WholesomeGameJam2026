@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
   m_Name: MureneHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: Murene
+  horseName: Eel Horse
   rarity: 0
   horseDescription: 
   Visual: {fileID: -9011297032106728221, guid: 6494d1f6eb295d249a96e17d37f8bd6f, type: 3}
