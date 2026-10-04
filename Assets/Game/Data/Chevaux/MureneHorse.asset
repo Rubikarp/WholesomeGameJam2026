@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Eel Horse
   rarity: 0
-  horseDescription: 
+  horseDescription: Careful with this one, its bite can be very dangerous.
   Visual: {fileID: -9011297032106728221, guid: 6494d1f6eb295d249a96e17d37f8bd6f, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

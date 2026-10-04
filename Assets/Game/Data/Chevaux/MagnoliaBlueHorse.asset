@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: MagnoliaBlueHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Magnolia Blue
-  horseSprite: {fileID: 5391443638163712088, guid: 632b6ab2c6d468042a8bc4b2efaefe04, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
-  horseDescription: This horse fusioned with a magic tree
+  rarity: 0
+  horseDescription: 'It can be found near '
+  Visual: {fileID: 5391443638163712088, guid: 632b6ab2c6d468042a8bc4b2efaefe04, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

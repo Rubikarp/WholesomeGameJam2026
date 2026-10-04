@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: ChoucasHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Choucas
-  horseSprite: {fileID: 6429785200928638160, guid: 71e8074f5abda00438a3d84a91a13c22, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
+  rarity: 3
   horseDescription: A dangerous black pegasus
+  Visual: {fileID: 6429785200928638160, guid: 71e8074f5abda00438a3d84a91a13c22, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

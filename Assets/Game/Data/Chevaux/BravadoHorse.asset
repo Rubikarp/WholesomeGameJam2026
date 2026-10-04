@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Bravado
   rarity: 0
-  horseDescription: A pegasus with a rayed coat
-  Visual: {fileID: 0}
+  horseDescription: "Je sais pas quoi \xE9crire pour celle l\xE0"
+  Visual: {fileID: 7035154972967320125, guid: 998aee42d2a0a484ea288af1ecef4949, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2

@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: ChristmasHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Christmas Horse
-  horseSprite: {fileID: -820500425884505217, guid: b706c71f4b37b584bbb61e643a74ba92, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
-  horseDescription: Happy Christmas !!!
+  rarity: 4
+  horseDescription: Merry Christmas !!!
+  Visual: {fileID: -820500425884505217, guid: b706c71f4b37b584bbb61e643a74ba92, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0

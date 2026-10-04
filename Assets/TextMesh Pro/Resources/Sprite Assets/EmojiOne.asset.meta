@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: fa05fc9ffafc1c041ada8a0dc9ca7586
 =======
 guid: c41005c129ba4d66911b75229fd70b45
 >>>>>>> origin/horseData
+=======
+guid: c41005c129ba4d66911b75229fd70b45
+>>>>>>> origin/HugoHorse
 timeCreated: 1480316912
 licenseType: Pro
 NativeFormatImporter:

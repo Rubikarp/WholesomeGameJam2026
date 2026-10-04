@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: c8415b47ecb51d24a933d6c8dc7a6122
 =======
 guid: fade42e8bc714b018fac513c043d323b
 >>>>>>> origin/horseData
+=======
+guid: fade42e8bc714b018fac513c043d323b
+>>>>>>> origin/HugoHorse
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:

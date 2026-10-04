@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: MagnoliaPinkHorse
+  m_Name: WhiteFrisonHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: Magnolia Pink
+  horseName: White Frison
   rarity: 0
-  horseDescription: This horse fusioned with a magic tree
-  Visual: {fileID: 6977599052045144, guid: 9a222f2356c00044dadb41de43366dd7, type: 3}
+  horseDescription: The spirits of the mountains created this Unicorn with their
+    magic
+  Visual: {fileID: 3639927476724600948, guid: f06af8eab230b3c47a79444f5f9db04a, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2

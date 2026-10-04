@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: MagnoliaPinkHorse
+  m_Name: PachyroHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: Magnolia Pink
+  horseName: Pachyrhinorsaurus
   rarity: 0
-  horseDescription: This horse fusioned with a magic tree
-  Visual: {fileID: 6977599052045144, guid: 9a222f2356c00044dadb41de43366dd7, type: 3}
+  horseDescription: This horse is one of the largest off all horses
+  Visual: {fileID: -7539487563939509231, guid: 0cd24797b75757e4c9ee2b8e5d99e296, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2

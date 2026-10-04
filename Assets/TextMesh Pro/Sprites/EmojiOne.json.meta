@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 58fde38ccbc06b44792a0e3e9fa2ad49
 =======
 guid: 8f05276190cf498a8153f6cbe761d4e6
 >>>>>>> origin/horseData
+=======
+guid: 8f05276190cf498a8153f6cbe761d4e6
+>>>>>>> origin/HugoHorse
 timeCreated: 1480316860
 licenseType: Pro
 TextScriptImporter:

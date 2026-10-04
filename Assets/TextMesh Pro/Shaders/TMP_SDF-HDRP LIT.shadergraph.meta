@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 6a30620bc04c48f4c87b3a7295ea4557
 =======
 guid: ca2ed216f98028c4dae6c5224a952b3c
 >>>>>>> origin/horseData
+=======
+guid: ca2ed216f98028c4dae6c5224a952b3c
+>>>>>>> origin/HugoHorse
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}

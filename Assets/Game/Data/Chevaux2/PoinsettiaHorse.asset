@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: MagnoliaPinkHorse
+  m_Name: PoinsettiaHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: Magnolia Pink
-  rarity: 0
-  horseDescription: This horse fusioned with a magic tree
-  Visual: {fileID: 6977599052045144, guid: 9a222f2356c00044dadb41de43366dd7, type: 3}
+  horseName: Poinsettia Horse
+  rarity: 3
+  horseDescription: Thoses horses migrate often from snowy places
+  Visual: {fileID: -7933644310444569619, guid: 954c5c81d0f4177448203f1ebb9eb3fd, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2

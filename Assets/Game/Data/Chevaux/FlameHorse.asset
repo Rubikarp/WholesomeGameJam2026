@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: FlameHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Flame Horse
-  horseSprite: {fileID: 2012990642664506647, guid: 30ed16c4758fb364db959621c0c79e0a, type: 3}
-  horseSpriteBestiary: {fileID: 0}
-  captureDifficulty: 0
-  horseDescription: A horse with a coat in flames
+  rarity: 0
+  horseDescription: A horse with a coat in flames. No one was able to mount it yet.
+  Visual: {fileID: 2012990642664506647, guid: 30ed16c4758fb364db959621c0c79e0a, type: 3}
+  VisualBestiary: {fileID: 0}
+  approchePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tolerancePattern:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distanceInitial: 0
+  stressSensibility: 0
