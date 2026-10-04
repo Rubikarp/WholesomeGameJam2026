@@ -13,13 +13,50 @@ MonoBehaviour:
   m_Name: BlackFrisonHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Black Frison Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 1
+  horseDescription: A beautiful black horse that can tolerate the strong heat of
+    the desert.
   Visual: {fileID: 1003345662683882684, guid: b9c61e9a3803ab84f84ef2be089774c9, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.49523985
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.3639682
+      value: 0.61732095
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.82754165
+      value: 0.33444634
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99583334
+      value: 0.49761963
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

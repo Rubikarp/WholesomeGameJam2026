@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db90463678e58d4478e853c736734940, type: 3}
-  m_Name: GrayHorse
+  m_Name: MureneLeopardHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: Gray Horse
+  horseName: Leopard Eel Horse
   rarity: 0
-  horseDescription: A common horse of the forest. Henry IV's white horse!
-  Visual: {fileID: 1783529767092708854, guid: 7f60d010fcf2bc7429d66297c5f7ca5c, type: 3}
+  horseDescription: 
+  Visual: {fileID: 389752361509559200, guid: 55236204e2c5c464d935e0dc159f2ba4, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
     serializedVersion: 2

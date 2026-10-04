@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: StyracosaurusHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Styracosaurus Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 3
+  horseDescription: I'm sorry thats not a horse, thats a dinosaure. Well, i guess
+    you can still ride it...?
   Visual: {fileID: 2747988233943948571, guid: 908ba3da8ac61b74a8f35fb2593d8d21, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

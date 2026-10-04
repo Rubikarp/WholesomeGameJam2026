@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RibbonEelHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: RibbonEelHorse
-  rarity: 0
-  horseDescription: 
+  rarity: 2
+  horseDescription: Yet another eel variation. Is our graphist okay?
   Visual: {fileID: -8290574964528350357, guid: 1cd3e6e15f119d7428a9a5a21e4ae3e1, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:

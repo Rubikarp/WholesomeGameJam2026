@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: QuetzalcoatlHorse
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: Quetzalcoatl Horse
-  rarity: 0
-  horseDescription: 
+  rarity: 3
+  horseDescription: The horse of an outside deity. The legend says that they ran
+    away from their homeland straight to our beautiful mountains.
   Visual: {fileID: -3161552673844685189, guid: 6788c21aed563d249a76e29706651195, type: 3}
   VisualBestiary: {fileID: 0}
   approchePattern:
